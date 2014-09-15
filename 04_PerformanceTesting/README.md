@@ -17,7 +17,9 @@ NOTE: This is more of a "Get started with Jmeter for performance testing" than a
 ####Who will benefit from this session:
 
 - You've always wanted to do some performance testing on your web-based project, but arent quite sure how to get started.
+
 OR
+
 - You have used other tools for performance testing and now want to try out Jmeter.
 
 
@@ -25,9 +27,12 @@ OR
 
 1. Microsoft Performance Testing Guidance for Web Applications (Read online or download pdf for FREE!):
 Read chapters 1-4. This covers some fundamentals, the need for performance testing etc 
+
 http://msdn.microsoft.com/en-us/library/bb924375.aspx
 
+
 2. HTTP Basics:
+
 http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
 
 

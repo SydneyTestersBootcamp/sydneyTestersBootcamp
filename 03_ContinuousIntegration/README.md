@@ -6,15 +6,25 @@ Contents:
 - What is CI and why is it needed?
 - Setting up a CI server (Jenkins)
 - Configuring CI agents (Jenkins)
+- Building and running tests automatically on every checkin.
 
 
 ####Reading Material
 
-1. 
-2. 
+1. Martin Fowler's article on Continous Integration:
+
+http://www.martinfowler.com/articles/continuousIntegration.html
+
+2. Wikipedia:
+
+http://en.wikipedia.org/wiki/Continuous_integration
+
 
 ####Pre-requisites
 
-1. Virtualbox
-2. Vagrant
-3. Download the Jenkins installers
+1. Virtualbox **
+2. Vagrant **
+3. Git
+4. Download the Jenkins installers
+
+** If you attended the session on Provisioning Environments, you'd already have these.
