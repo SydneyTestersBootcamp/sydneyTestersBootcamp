@@ -1,0 +1,17 @@
+{
+  "capabilities":
+      [
+        {
+          "browserName": "phantomjs",
+		  "webdriver.phantomjs.driver": ".\grid\phantomjs.exe",
+          "maxInstances": 1
+        },
+      ],
+  "configuration":
+  {
+    "maxSession": 1,
+    "register": true,
+    "hubPort": 4444,
+    "hubHost": 10.94.76.230
+  }
+}

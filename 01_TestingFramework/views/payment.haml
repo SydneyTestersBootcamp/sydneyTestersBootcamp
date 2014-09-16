@@ -1,0 +1,72 @@
+.container
+  #quotebox{:style => "margin-top:30px;", :class => "mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"}                    
+    .panel.panel-info
+      .panel-heading
+        %h3{:class => "panel-title text-center"}Sydney Testers Insurance Payment
+      .panel-body{:style => "padding-top:30px"}
+    	
+        %form{:id => "ccForm", :class => "form-horizontal", :role => "form", :action => "/pay", :method => "post", "data-bv-feedbackicons-valid" => "glyphicon glyphicon-ok", "data-bv-feedbackicons-invalid" => "glyphicon glyphicon-remove", "data-bv-feedbackicons-validating" => "glyphicon glyphicon-refresh", "data-bv-submitbuttons" => 'button[type="submit"]', "data-bv-live" => "enabled"}
+		
+          %fieldset
+
+            .form-group
+              %label.col-sm-3.control-label{:for => "card-holder-name"} Name on Card
+              .col-sm-9
+                %input#cardholdername.form-control{:name => "cardholdername", :placeholder => "Card Holder's Name", :type => "text"}
+				
+            .form-group
+              %label.col-sm-3.control-label{:for => "username"} Email/Username
+              .col-sm-9
+                %input#username.form-control{:name => "username", :placeholder => "This will be your login for the website", :type => "text"}
+						  
+            .form-group
+              %label.col-sm-3.control-label{:for => "password"} Password
+              .col-sm-9
+                %input#password.form-control{:name => "password", :placeholder => "Password", :type => "text"}
+				
+            .form-group
+              %label.col-sm-3.control-label{:for => "card-number"} Card Number
+              .col-sm-9
+                %input#card-number.form-control{:name => "cc", :placeholder => "Debit/Credit Card Number", :type => "text"}
+				
+            .form-group
+              %label.col-sm-3.control-label{:for => "expiry-month"} Expiration Date
+              .col-md-6
+                .row
+                  .col-md-6
+                    %select#expiry-month.form-control.col-sm-4{:name => "expiry-month"}
+                      %option Month
+                      %option{:value => "01"} Jan (01)
+                      %option{:value => "02"} Feb (02)
+                      %option{:value => "03"} Mar (03)
+                      %option{:value => "04"} Apr (04)
+                      %option{:value => "05"} May (05)
+                      %option{:value => "06"} June (06)
+                      %option{:value => "07"} July (07)
+                      %option{:value => "08"} Aug (08)
+                      %option{:value => "09"} Sep (09)
+                      %option{:value => "10"} Oct (10)
+                      %option{:value => "11"} Nov (11)
+                      %option{:value => "12"} Dec (12)
+                  .col-md-6
+                    %select.form-control{:name => "expiry-year"}
+                      %option{:value => "13"} 2013
+                      %option{:value => "14"} 2014
+                      %option{:value => "15"} 2015
+                      %option{:value => "16"} 2016
+                      %option{:value => "17"} 2017
+                      %option{:value => "18"} 2018
+                      %option{:value => "19"} 2019
+                      %option{:value => "20"} 2020
+                      %option{:value => "21"} 2021
+                      %option{:value => "22"} 2022
+                      %option{:value => "23"} 2023
+					  
+            .form-group
+              %label.col-sm-3.control-label{:for => "cvv"} Card CVV
+              .col-sm-4
+                %input#cvv.form-control{:name => "cvv", :placeholder => "Security Code", :type => "text"}
+				
+            .form-group
+              .col-sm-offset-3.col-sm-9
+                %button{:id => "pay", :type => "submit", :name => "pay", :class => "btn btn-primary btn-lg btn-block"}Pay Now

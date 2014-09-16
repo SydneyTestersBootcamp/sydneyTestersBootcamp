@@ -1,0 +1,43 @@
+.container
+  #premiumbox{:style => "margin-top:30px;", :class => "mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"}                    
+    .panel.panel-info
+      .panel-heading
+        %h3{:class => "panel-title text-center"}Sydney Testers Life Insurance
+      .panel-body{:style => "padding-top:30px"}
+        %form{:id => "premiumform", :class => "form-horizontal", :role => "form"}
+		
+          %fieldset
+		  
+          .form-group{:style => "margin-bottom: 10px"}
+            %dl.dl-horizontal
+              %dt Age
+              %dd== #{@quote.age}
+              %dt Email
+              %dd== #{@quote.email}
+              %dt Gender
+              %dd== #{@quote.namedGender}
+              - if @quote.type=="life"
+                %dt Occupation category
+                %dd== #{@quote.namedOccupationCategory}
+              - else
+                %dt Make
+                %dd== #{@quote.namedMake}
+                %dt Year
+                %dd== #{@quote.year}
+              %dt State
+              %dd== #{@quote.namedState}
+			  
+      .panel-footer.clearfix
+        %form{:id => "premiumResultform", :class => "form-horizontal", :role => "form"}
+		
+          %fieldset
+		  
+          .form-group
+            %dl.dl-horizontal
+              %dt{:class => "panel-title text-center"} Monthly Premium
+              %dd.mark== $#{@quote.premium}
+    	
+          .form-group
+            .col-md-4
+            .col-md-6
+              %a.btn.btn-primary.btn-lg.btn-block{:href => "/payment", :id => "payment", :type => "submit", :name => "payment", :style => "margin-bottom: 10px"} Buy Insurance 

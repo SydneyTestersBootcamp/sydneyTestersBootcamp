@@ -1,0 +1,17 @@
+{
+  "capabilities":
+      [
+        {
+          "browserName": "chrome",
+		  "webdriver.chrome.driver": "./grid/chromedriver",
+          "maxInstances": 1
+        },
+      ],
+  "configuration":
+  {
+    "maxSession": 1,
+    "register": true,
+    "hubPort": 4444,
+    "hubHost": 127.0.0.1
+  }
+}

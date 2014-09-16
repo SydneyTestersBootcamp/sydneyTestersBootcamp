@@ -1,0 +1,21 @@
+.container
+  #quotebox{:style => "margin-top:30px;", :class => "mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"}
+    .panel.panel-info
+      .panel-heading
+        %h3{:class => "panel-title text-center"}Customers of SydneyTesters
+      .panel-body{:style => "padding-top:30px"}
+
+        %table.table.table-hover
+          %thead
+            %tr
+              %th Email
+              %th Name
+              %th Role
+              %th Policies
+          %tbody
+            - @users.each do |user|
+              %tr
+                %td= user.username
+                %td= user.name
+                %td= user.role
+                %td 1

@@ -1,0 +1,26 @@
+require_relative '../../app'
+require 'capybara/cucumber'
+require 'selenium-webdriver'
+
+Capybara.register_driver :selenium_chrome do |app|
+  browser_required = Selenium::WebDriver::Remote::Capabilities.new({:browser_name=>"chrome", :javascript_enabled=>true})
+  Capybara::Selenium::Driver.new(app, :browser => :remote, :url => "http://localhost:4444/wd/hub", :desired_capabilities => browser_required)
+end
+
+Capybara.register_driver :selenium_headless do |app|
+  browser_required = Selenium::WebDriver::Remote::Capabilities.new({:browser_name=>"phantomjs", :javascript_enabled=>true})
+  Capybara::Selenium::Driver.new(app, :browser => :remote, :url => "http://localhost:4444/wd/hub", :desired_capabilities => browser_required)
+end
+
+Before('@chrome') do
+  Capybara.current_driver  = :selenium_chrome
+end
+
+Before('~@chrome') do
+  Capybara.current_driver  = :selenium_headless
+end
+
+Capybara.configure do |config|
+  Capybara.server_port = 9887 + ENV['TEST_ENV_NUMBER'].to_i
+  Capybara.app = App.new
+end
