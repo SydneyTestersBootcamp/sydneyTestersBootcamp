@@ -51,3 +51,7 @@ Install any dependencies through the following commands
 
 We would suggest you spend 15 minutes on the tryruby.org to get an idea of the basics of ruby
 
+Have a look at Capybara which is the Browser Runner we are using
+
+http://rubydoc.info/github/jnicklas/capybara/master#Using_Capybara_with_Cucumber
+
