@@ -14,10 +14,12 @@ Contents:
 1. Martin Fowler's article on Continous Integration:
 
 http://www.martinfowler.com/articles/continuousIntegration.html
-
 2. Wikipedia:
 
 http://en.wikipedia.org/wiki/Continuous_integration
+
+Internal reference:
+http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-jenkins-part-i
 
 
 ####Pre-requisites

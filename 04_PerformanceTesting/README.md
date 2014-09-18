@@ -25,21 +25,25 @@ OR
 
 ####Reading Material
 
-1. Microsoft Performance Testing Guidance for Web Applications (Read online or download pdf for FREE!):
+1. A short introductory book on Performance Testing by Scott Barber (free download):
+
+http://www.myndit.com.au/documents/336Testing4Dummies.pdf
+
+2. Microsoft Performance Testing Guidance for Web Applications (Read online or download pdf for FREE!):
+
 Read chapters 1-4. This covers some fundamentals, the need for performance testing etc 
 
 http://msdn.microsoft.com/en-us/library/bb924375.aspx
 
-
-2. HTTP Basics:
+3. HTTP Basics:
 
 http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
 
 
 ####Pre-requisites
 
-1. Install Java (version 6 or above)
-2. Download and unzip jmeter 2.11 (http://jmeter-plugins.org/)
+1. Install Java (version 6 or above, 7 preferable). Test this by running "java -version" on command line.
+2. Download and unzip jmeter 2.11 (http://jmeter.apache.org/)
 3. Download the jmeter plugins (http://jmeter-plugins.org/) (Standard Set & Extras Set)
 4. Install Firefox browser
 5. Install Firefox plugin: FoxyProxy Basic
