@@ -1,74 +1,53 @@
-quickquote
-==========
+####Session 1: Setting Up a Testing Framework
 
-An Insurance Quote app for the Sydney Testers "Faster Tests, Faster Feedback" workshop.
+####Who will benefit from this session:
 
-####URL for the webapp, hosted on heroku: 
-http://sydneytesters.herokuapp.com/
+This session will take an existing code base with no tests and implement the following :- 
 
-####Things to have setup on your machine 
-(just google them to find installers):
+	a) A testing framework
+	b) Unit Tests
+	c) BDD Tests
+	d) Data Driven BDD Tests
 
-1. git
-2. ruby 2.0.x
-3. bundler gem
-4. chrome
+Anybody who works as a manual tester or has never been involved with the early stages of a project will benefit. Even if you will not be writing these tests it will give you a clear example of what is done as well how it is done. Furthermore an ability to pair with developers writing unit tests so that you can improve the coverage and speed of your tests.
 
-NOTE: The below three things can be downloaded for free from the internet, but you dont necessarily have to, as I have included the files in the "grid" folder.
+It will be hands on as well so instead of just understanding the theory you will get to practice.
 
-5. Selenium Server standalone library
-(*The latest version available appears to be 2.42.2. This version has a known issue with its http implementation. So, if you have no other compelling reason, try to use the version I provided in the "grid" folder, which has this issue fixed. This version is not released publicly yet*)
+####Reading Material
 
-6. chromedriver*
-(*If you do download this, copy it into any folder in your PATH and then make it executable.*)
+1. tryruby.org 
+	
+	We would suggest you spend 15 minutes to get an idea of the basics of ruby
 
-7. phantomjs*
-(*If you do download this, copy it into any folder in your PATH and then make it executable.*)
+2. Capybara 
+
+	Have a look at Capybara which is the Browser Runner we are using :- 
+
+		http://rubydoc.info/github/jnicklas/capybara/master#Using_Capybara_with_Cucumber
 
 
-####To set up the project on your machine:
-1. `git clone https://github.com/hdushan/quickquote.git`
-2. `bundle install`
+####Pre-requisites and setup instructions
 
-####Rake targets to run tests locally:
-- `rake unit` *runs unit tests only*
-- `rake chrome` *runs cucumber tests using chrome*
-- `rake headless` *runs cucumber tests using phantomjs*
-- `rake` *runs unit tests and cucumber tests headless*
+1. Install Sublime text Editor
 
-####To run the app locally (The tests will automatically start the sydneytesters server on your local machine, so you dont need to start it manually prior to running prior to test):
-1. In the quickquote folder, run '`shotgun`'
-2. Use a browser to navigate to 
-http://localhost:9393
+2. Install the Sublime packages  - 
+				Ruby Debugger, Rspec and Cucumber
+				Install through Apple/shift P shortcut or through Sublime Text menu
+				Search for Package Control : Install Package and then add the package (Rspec etc) from there
 
-####Rake targets to run tests against the heroku-hosted app:
-- `rake qa_chrome` *runs cucumber tests using chrome*
-- `rake qa_headless` *runs cucumber tests using phantomjs*
 
-####Selenium Grid:
-######To start hub
-In folder quickquote/grid:
-- `java -jar selenium-server-standalone-2.42.2x.jar -role hub`
+3. Setup a Github account and send us your account name
 
-######To start node (Chrome/OSX)
-In folder quickquote/grid:
-- `java -jar selenium-server-standalone-2.42.2x.jar -role node -nodeConfig osxchrome.json -port 5556`
-ps: change the "port" number as required for each node. Each node on the same machine needs a unique port number.
+	Once we have added you to the repositry you can Fork the repo by clicking Fork in the top right corner. Put the code in a location that you will be able to find.
 
-######To start node (Chrome/Win7)
-In folder quickquote\grid:
-- `java -jar selenium-server-standalone-2.42.2x.jar -role node -nodeConfig win7chrome.json -Dwebdriver.chrome.driver=Y:\Workspace\quickquote\grid\chromedriver.exe`
+	=======================DONT CLONE=================================================
 
-####Rake targets to run tests parallely against heroku-hosted app 
-(NOTE: Please have at least 3 nodes running, otherwise tests may time out intermittently):
-- `rake qa_chromeparallel` *runs cucumber tests parallely using chrome*
-- `rake qa_headlessparallel` *runs cucumber tests parallely using phantomjs*
+4. Install RVM - You can install for your specific O/S 
 
-####Rake targets to run tests parallely against local sydneytesters app (The tests will automatically start the sydneytesters server on your local machine, so you dont need to start it manually prior to running prior to test):
-(NOTE: Please have at least 3 nodes running, all on the same machine as the server):
-- `rake chromeparallel` *runs cucumber tests parallely using chrome*
-- `rake headlessparallel` *runs cucumber tests parallely using phantomjs*
+		http://rvm.io/rvm/install
 
-####Travis build for above webapp:
-Search for the public repository “**quickquote**” at 
-https://travis-ci.org/
+5. Install Ruby through the command line 
+
+		rvm install ruby-2.1.2
+
+
