@@ -21,6 +21,13 @@ https://www.virtualbox.org/wiki/Downloads
 - Install ChefDK<br>
 http://downloads.getchef.com/chef-dk/
 
+######Important time saving note
+Since creating first virtual machine would trigger downloading of hundred of megabytes, please run below command prior coming to the session
+```sh
+vagrant box add chef/ubuntu-14.04
+```
+this would trigger downloading the base virtual box for ubuntu 14.04 x64
+
 ######Ruby and related Gems
 - For Unix:
 ```sh
