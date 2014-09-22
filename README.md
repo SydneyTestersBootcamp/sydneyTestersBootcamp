@@ -5,17 +5,13 @@ This is an outline of the sessions for the bootcamp.
 
 Each session has a folder in here. In the folder, you'd find more information about the session, some reading materials and pre-requisites. Please make sure you read thru the suggested material, and have the required software installed prior to coming in for the sessions.
 
-####Session 1: Test Automation Framework
-[Test Automation Framework workshop folder](01_TestingFramework/)
+####Session 1: <a href="01_TestingFramework/">Test Automation Framework</a>
 
-####Session 2: Provisioning Test environments
-[Provisioning Test Environments workshop folder](02_ProvisioningTestEnvironment/)
+####Session 2: <a href="02_ProvisioningTestEnvironment/">Provisioning Test environments</a>
 
-####Session 3: Continuous Integration
-[Continuous Integration workshop folder](03_ContinuousIntegration/)
+####Session 3: <a href="03_ContinuousIntegration/">Continuous Integration</a>
 
 ####Session 4: <a href="04_PerformanceTesting/">Performance Testing using Jmeter</a>
-[Performance Testing workshop folder](04_PerformanceTesting/)
 
 ####Session 5: Security/Penetration Testing
 Coming soon ...
