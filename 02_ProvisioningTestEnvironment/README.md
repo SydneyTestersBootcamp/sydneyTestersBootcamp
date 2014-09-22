@@ -24,7 +24,7 @@ http://downloads.getchef.com/chef-dk/
 ######Ruby and related Gems
 - For Unix:
 ```sh
-\curl -sSL https://get.rvm.io | bash -s stable --ruby
+curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 - For Windows: download and install Ruby from http://rubyinstaller.org/downloads/
 - Installing require gems and vagrant plugins:
