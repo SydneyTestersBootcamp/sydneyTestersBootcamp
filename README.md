@@ -14,7 +14,7 @@ Each session has a folder in here. In the folder, you'd find more information ab
 ####Session 3: Continuous Integration
 [Continuous Integration workshop folder](03_ContinuousIntegration/)
 
-####Session 4: Performance Testing using Jmeter
+####Session 4: <a href="04_PerformanceTesting/">Performance Testing using Jmeter</a>
 [Performance Testing workshop folder](04_PerformanceTesting/)
 
 ####Session 5: Security/Penetration Testing
