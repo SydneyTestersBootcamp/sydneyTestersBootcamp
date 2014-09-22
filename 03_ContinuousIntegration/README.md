@@ -26,7 +26,7 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 
 ####Pre-requisites
 
-######1. Install the below software. Google them to find installers.
+#####1. Install the below software. Google them to find installers.
 
 1. Virtualbox **
 2. Vagrant **
@@ -34,17 +34,35 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 
 ** If you attended last week's session on Provisioning Environments, you'd already have these. We'll use some of what you learned there to build the CI server and agent VMs.
 
-######2. Create an account on github.com if you dont already have one.
+#####2. Create an account on github.com if you dont already have one.
 
-######3. Clone the repository to your local machine
-`git clone https://github.com/hdushan/quickquote.git`
+#####3. Clone the repository to your local machine
+`git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp --depth 1`
 
-######4. Set up the VM's that we'll use for the workshop (Seperate VM's to run the CI Server and CI Agent)
+This could take a while. You can do a shallow clone if you dont want to clone the whole history of the repo (add the flag `--depth 1`).
+
+#####4. Set up the CI Server VM that we'll use for the workshop
 `cd 03_ContinuousIntegration\CI_Server`
+
+and then:
+
 `vagrant up`
+
 This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so please do this before coming for the session. You may want to do this on a wifi connection due to the large data download.
 
 Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
 
 Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant down` to shut down the VM.
 
+#####5. Set up the CI Agent VM that we'll use for the workshop
+`cd 03_ContinuousIntegration\CI_Agent`
+
+and then:
+
+`vagrant up`
+
+This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so please do this before coming for the session. You may want to do this on a wifi connection due to the large data download.
+
+Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
+
+Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant down` to shut down the VM.
