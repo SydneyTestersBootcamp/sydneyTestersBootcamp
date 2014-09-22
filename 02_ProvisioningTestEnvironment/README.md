@@ -26,36 +26,26 @@ http://downloads.getchef.com/chef-dk/
 
 3. Ruby and related Gems
 For Unix:
-
 > \curl -sSL https://get.rvm.io | bash -s stable --ruby
-
 For Windows:
 http://rubyinstaller.org/downloads/
-
 Installing require gems and vagrant plugins:
 > gem install berkshelf --no-ri --no-rdoc
-
 > sudo gem install bundler
-
 > vagrant plugin install vagrant-berkshelf
-
 > vagrant plugin install vagrant-omnibus
 
 4. Checkout project from GitHub
 > git clone https://github.com/hdushan/quickquote.git
-
 if you don't have git, please get it from: http://git-scm.com/downloads
 
 5. Vagrant up
 > cd quickquote/machines
-
 > bundle install
-
 > vagrant up
 
 6. Finalize
 You're now ready to travel to your VM
-
 > vagrant ssh
 
 ####Reading Material
