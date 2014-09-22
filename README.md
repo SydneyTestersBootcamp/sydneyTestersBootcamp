@@ -11,7 +11,13 @@ Each session has a folder in here. In the folder, you'd find more information ab
 ####Session 2: Provisioning Test environments
 
 
+[####Session 3: Continuous Integration](03_ContinuousIntegration/README.md)
+
 ####Session 3: Continuous Integration
+[Test Link to folder instead of readme](03_ContinuousIntegration/)
+
+####Session 3: Continuous Integration
+[Continuous Integration](03_ContinuousIntegration/README.md)
 
 
 ####Session 4: Performance Testing using Jmeter
