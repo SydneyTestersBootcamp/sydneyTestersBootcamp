@@ -1,8 +1,9 @@
-####Session 2: Provisioning Test Environment with Chef and Vagrant
+##Session 2: Provisioning Test Environment with Chef and Vagrant
 
 The aim of this session is to help Tester to quickly set up Test / Dev environment on their own machine and share the configuration among team members.
 
-Contents:
+####Contents:
+
 - Common Tasks on setting up new Dev/Test Environment (without Chef/Vagrant)
 - Most common used Vagrant commands
 - Installing pre-require packages
@@ -12,17 +13,15 @@ Contents:
 - Iteration 4: Handling the configuration to other members
 
 ####Installation Instruction
-
-1. Install Vagrant, Virtualbox
-Get the software at below sites
-- Vagrant: https://www.vagrantup.com/downloads.html
-- Virtualbox: https://www.virtualbox.org/wiki/Downloads
-
-2. Install ChefDK
-Select ChefDK as per your prefer OS
+######Prerequisite packages:
+- Install Vagrant<br>
+Choose Vagrant for your prefer OS from: https://www.vagrantup.com/downloads.html
+- Install Virtualbox<br>
+https://www.virtualbox.org/wiki/Downloads
+- Install ChefDK<br>
 http://downloads.getchef.com/chef-dk/
 
-3. Ruby and related Gems
+######Ruby and related Gems
 - For Unix:
 ```sh
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
@@ -36,34 +35,34 @@ vagrant plugin install vagrant-berkshelf
 vagrant plugin install vagrant-omnibus
 ```
 
-4. Checkout project from GitHub
+######Checkout project from GitHub
 - If you don't have git, please get it from: http://git-scm.com/downloads
 ```sh
 git clone https://github.com/hdushan/quickquote.git
 ```
 
-5. Vagrant up
+- Vagrant up
 ```sh
 cd quickquote/machines
 bundle install
 vagrant up
 ```
 
-6. Finalize
-You're now ready to travel to your VM
-> vagrant ssh
+- You're now ready to travel to your VM
+```sh
+vagrant ssh
+```
+
+####Common issues
+- RuntimeError: Couldn't determine Berks version<br>
+You would need to add chefdk/bin to your PATH
+
 
 ####Reading Material
-1. Mischa Taylor's Coding Blog:
-http://misheska.com/blog/2013/06/16/getting-started-writing-chef-cookbooks-the-berkshelf-way/
-http://misheska.com/blog/2013/06/23/getting-started-writing-chef-cookbooks-the-berkshelf-way-part2/
-http://misheska.com/blog/2013/08/06/getting-started-writing-chef-cookbooks-the-berkshelf-way-part3/
-
-2. Chef Online Documents:
+- Mischa Taylor's Coding Blog:<br>
+http://misheska.com/blog/2013/06/16/getting-started-writing-chef-cookbooks-the-berkshelf-way/ <br>
+http://misheska.com/blog/2013/06/23/getting-started-writing-chef-cookbooks-the-berkshelf-way-part2/ <br>
+http://misheska.com/blog/2013/08/06/getting-started-writing-chef-cookbooks-the-berkshelf-way-part3/ <br>
+<br>
+2. Chef Online Documents:<br>
 https://docs.getchef.com/essentials_cookbooks.html
-
-####Pre-requisites
-
-1. Virtualbox (https://www.virtualbox.org/wiki/Downloads)
-2. Vagrant (https://www.vagrantup.com/downloads.html)
-3. Ruby (>= 1.9) other ruby packages (Gem, Berkshelf...)
