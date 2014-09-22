@@ -71,5 +71,9 @@ http://misheska.com/blog/2013/06/16/getting-started-writing-chef-cookbooks-the-b
 http://misheska.com/blog/2013/06/23/getting-started-writing-chef-cookbooks-the-berkshelf-way-part2/ <br>
 http://misheska.com/blog/2013/08/06/getting-started-writing-chef-cookbooks-the-berkshelf-way-part3/ <br>
 <br>
-2. Chef Online Documents:<br>
+
+- Chef Online Documents:<br>
 https://docs.getchef.com/essentials_cookbooks.html
+
+- Vagrant Online Documents:<br>
+http://docs.vagrantup.com/v2/
