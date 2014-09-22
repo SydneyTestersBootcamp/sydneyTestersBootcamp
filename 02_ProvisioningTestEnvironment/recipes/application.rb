@@ -30,3 +30,51 @@
 #   EOH
 #   action :run
 # end
+
+# create folder
+directory "/usr/local/java" do
+  owner "root"
+  group "root"
+  action :create
+end
+
+# installing JDK 7 from local package
+# execute "install-local-jdk" do
+#   cwd "/usr/local/java"
+#   command <<-EOH
+#     apt-get purge openjdk-\*
+#     cp /vagrant_data/jdk-7u67-linux-x64.gz /usr/local/java/
+#     tar -xvzf jdk-7u67-linux-x64.gz
+
+#     update-alternatives --install "/usr/bin/java" "java" "/usr/local/java/jdk1.7.0_67/bin/java" 1
+#     update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/java/jdk1.7.0_67/bin/javac" 1
+#     update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/java/jdk1.7.0_67/bin/javaws" 1
+
+#     update-alternatives --set java /usr/local/java/jdk1.7.0_67/bin/java
+#     update-alternatives --set javac /usr/local/java/jdk1.7.0_67/bin/javac
+#     update-alternatives --set javaws /usr/local/java/jdk1.7.0_67/bin/javaws
+
+#     echo "export JAVA_HOME=/usr/local/java/jdk1.7.0_67" >> /etc/profile
+#     echo "export PATH=$PATH:$JAVA_HOME/bin" >> /etc/profile
+#   EOH
+#   action :run
+# end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
