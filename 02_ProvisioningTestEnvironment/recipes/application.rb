@@ -20,3 +20,13 @@
 #   EOH
 #   action :run
 # end
+
+# installing JDK 7
+# execute "install-jdk7" do
+#   command <<-EOH
+#     sudo add-apt-repository ppa:webupd8team/java
+#     sudo apt-get update
+#     sudo apt-get install oracle-java7-installer
+#   EOH
+#   action :run
+# end
