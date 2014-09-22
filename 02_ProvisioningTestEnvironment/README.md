@@ -62,7 +62,7 @@ vagrant ssh
 
 ####Common issues
 - RuntimeError: Couldn't determine Berks version<br>
-You would need to add chefdk/bin to your PATH
+You would need to add chefdk/bin in front of your PATH
 
 
 ####Reading Material
