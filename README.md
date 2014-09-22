@@ -9,7 +9,7 @@ Each session has a folder in here. In the folder, you'd find more information ab
 
 ####Session 2: <a href="02_ProvisioningTestEnvironment/">Provisioning Test environments</a>
 
-####Session 3: <a href="03_ContinuousIntegration/">Continuous Integration</a>
+####Session 3: [Continuous Integration](03_ContinuousIntegration/)
 
 ####Session 4: <a href="04_PerformanceTesting/">Performance Testing using Jmeter</a>
 
