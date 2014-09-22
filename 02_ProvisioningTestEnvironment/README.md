@@ -15,34 +15,39 @@ Contents:
 
 1. Install Vagrant, Virtualbox
 Get the software at below sites
-Vagrant:
-https://www.vagrantup.com/downloads.html
-Virtualbox:
-https://www.virtualbox.org/wiki/Downloads
+- Vagrant: https://www.vagrantup.com/downloads.html
+- Virtualbox: https://www.virtualbox.org/wiki/Downloads
 
 2. Install ChefDK
 Select ChefDK as per your prefer OS
 http://downloads.getchef.com/chef-dk/
 
 3. Ruby and related Gems
-For Unix:
-> \curl -sSL https://get.rvm.io | bash -s stable --ruby
-For Windows:
-http://rubyinstaller.org/downloads/
-Installing require gems and vagrant plugins:
-> gem install berkshelf --no-ri --no-rdoc
-> sudo gem install bundler
-> vagrant plugin install vagrant-berkshelf
-> vagrant plugin install vagrant-omnibus
+- For Unix:
+```sh
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+- For Windows: download and install Ruby from http://rubyinstaller.org/downloads/
+- Installing require gems and vagrant plugins:
+```sh
+gem install berkshelf --no-ri --no-rdoc
+sudo gem install bundler
+vagrant plugin install vagrant-berkshelf
+vagrant plugin install vagrant-omnibus
+```
 
 4. Checkout project from GitHub
-> git clone https://github.com/hdushan/quickquote.git
-if you don't have git, please get it from: http://git-scm.com/downloads
+- If you don't have git, please get it from: http://git-scm.com/downloads
+```sh
+git clone https://github.com/hdushan/quickquote.git
+```
 
 5. Vagrant up
-> cd quickquote/machines
-> bundle install
-> vagrant up
+```sh
+cd quickquote/machines
+bundle install
+vagrant up
+```
 
 6. Finalize
 You're now ready to travel to your VM
