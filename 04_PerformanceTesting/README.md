@@ -25,13 +25,13 @@ OR
 
 ####Reading Material
 
-######A short introductory [book on Performance Testing](http://www.myndit.com.au/documents/336Testing4Dummies.pdf) by Scott Barber (free download):
+######1. A short introductory [book on Performance Testing](http://www.myndit.com.au/documents/336Testing4Dummies.pdf) by Scott Barber
 
-######[Microsoft Performance Testing Guidance for Web Applications](http://msdn.microsoft.com/en-us/library/bb924375.aspx). Read online or download pdf for FREE!):
+######2. [Microsoft Performance Testing Guidance for Web Applications](http://msdn.microsoft.com/en-us/library/bb924375.aspx)
 
 Read chapters 1-4. This covers some fundamentals, the need for performance testing etc 
 
-######[HTTP Basics](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+######3. [HTTP Basics](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 
 
 ####Pre-requisites
