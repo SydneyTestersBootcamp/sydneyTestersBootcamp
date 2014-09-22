@@ -11,6 +11,40 @@ Contents:
 - Iteration 3: Loading latest code
 - Iteration 4: Handling the configuration to other members
 
+####Installation Instruction
+
+1. Install Vagrant, Virtualbox
+Get the software at below sites
+Vagrant:
+https://www.vagrantup.com/downloads.html
+
+Virtualbox:
+https://www.virtualbox.org/wiki/Downloads
+
+2. Ruby and related Gems
+For Unix:
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+
+For Windows:
+http://rubyinstaller.org/downloads/
+
+Installing require gems and vagrant plugins:
+gem install berkshelf --no-ri --no-rdoc
+sudo gem install bundler
+vagrant plugin install vagrant-berkshelf
+vagrant plugin install vagrant-omnibus
+
+3. Checkout project from GitHub
+git clone https://github.com/hdushan/quickquote.git
+
+if you don't have git, please get it from: http://git-scm.com/downloads
+
+4. Vagrant up
+cd quickquote/machines
+bundle install
+vagrant up
+
+5. Finalize
 ####Reading Material
 
 1. Mischa Taylor's Coding Blog:
