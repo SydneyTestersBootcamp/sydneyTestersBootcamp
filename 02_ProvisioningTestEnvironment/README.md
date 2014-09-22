@@ -14,6 +14,7 @@ Contents:
 ####Installation Instruction
 1. Install Vagrant, Virtualbox
 Get the software at below sites
+
 Vagrant:
 https://www.vagrantup.com/downloads.html
 
@@ -21,11 +22,13 @@ Virtualbox:
 https://www.virtualbox.org/wiki/Downloads
 
 2. Install ChefDK
+
 Select ChefDK as per your prefer OS
 http://downloads.getchef.com/chef-dk/
 
 3. Ruby and related Gems
 For Unix:
+
 > \curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 For Windows:
@@ -38,30 +41,30 @@ Installing require gems and vagrant plugins:
 > vagrant plugin install vagrant-omnibus
 
 4. Checkout project from GitHub
+
 > git clone https://github.com/hdushan/quickquote.git
 
 if you don't have git, please get it from: http://git-scm.com/downloads
 
 5. Vagrant up
+
 > cd quickquote/machines
 > bundle install
 > vagrant up
 
 6. Finalize
 You're now ready to travel to your VM
+
 > vagrant ssh
+
 ####Reading Material
-
 1. Mischa Taylor's Coding Blog:
-
 http://misheska.com/blog/2013/06/16/getting-started-writing-chef-cookbooks-the-berkshelf-way/
 http://misheska.com/blog/2013/06/23/getting-started-writing-chef-cookbooks-the-berkshelf-way-part2/
 http://misheska.com/blog/2013/08/06/getting-started-writing-chef-cookbooks-the-berkshelf-way-part3/
 
 2. Chef Online Documents:
-
 https://docs.getchef.com/essentials_cookbooks.html
-
 
 ####Pre-requisites
 
