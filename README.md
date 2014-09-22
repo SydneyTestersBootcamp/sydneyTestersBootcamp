@@ -6,7 +6,7 @@ This is an outline of the sessions for the bootcamp.
 Each session has a folder in here. In the folder, you'd find more information about the session, some reading materials and pre-requisites. Please make sure you read thru the suggested material, and have the required software installed prior to coming in for the sessions.
 
 ####Session 1: Test Automation Framework
-
+[Test Automation Framework](01_TestingFramework/README.md)
 
 ####Session 2: Provisioning Test environments
 
