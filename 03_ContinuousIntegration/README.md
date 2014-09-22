@@ -32,9 +32,10 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 
 #####1. Install the below software. Google them to find installers.
 
-1. Virtualbox **
-2. Vagrant **
-3. Git
+1. Ruby (>= 2.0) **
+2. Virtualbox **
+3. Vagrant **
+4. Git
 
 ** If you attended last week's session on Provisioning Environments, you'd already have these.
 
