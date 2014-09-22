@@ -45,12 +45,12 @@ vagrant plugin install vagrant-omnibus
 ######Checkout project from GitHub
 - If you don't have git, please get it from: http://git-scm.com/downloads
 ```sh
-git clone https://github.com/hdushan/quickquote.git
+git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 ```
 
 - Vagrant up
 ```sh
-cd quickquote/machines
+cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment
 bundle install
 vagrant up
 ```
