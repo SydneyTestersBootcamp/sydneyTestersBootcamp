@@ -1,6 +1,8 @@
 ####Session 3: Continuous Integration with Jenkins
 
-The aim of this session is to set up a CI Server & agent (Jenkins) to start a build and run tests everytime a developer checks in code.
+The aim of this session is to set up a CI Server & agent (Jenkins) to start a build and run tests everytime a developer checks in code. 
+
+This workshop follows on from last week's session about provisioning environments. We'll use some of what you learned there to build the CI server and agent VMs.
 
 Contents:
 - What is CI and why is it needed?
@@ -13,14 +15,16 @@ Contents:
 
 ####Reading Material
 
-1. Martin Fowler's article on Continous Integration:
+######Martin Fowler's article on Continous Integration:
 
 http://www.martinfowler.com/articles/continuousIntegration.html
-2. Wikipedia:
+
+######Wikipedia:
 
 http://en.wikipedia.org/wiki/Continuous_integration
 
-Internal reference:
+######Internal reference:
+
 http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-jenkins-part-i
 
 
@@ -32,7 +36,7 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 2. Vagrant **
 3. Git
 
-** If you attended last week's session on Provisioning Environments, you'd already have these. We'll use some of what you learned there to build the CI server and agent VMs.
+** If you attended last week's session on Provisioning Environments, you'd already have these.
 
 #####2. Create an account on github.com if you dont already have one.
 
