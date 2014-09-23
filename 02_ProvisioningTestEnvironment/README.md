@@ -48,7 +48,7 @@ vagrant plugin install vagrant-omnibus
 git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 ```
 
-- Vagrant up
+- Bring up the machine
 ```sh
 cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment
 bundle install
@@ -59,6 +59,15 @@ vagrant up
 ```sh
 vagrant ssh
 ```
+####Most used commands
+- vagrant up: bring up and provision the machine
+- vagrant destroy: anything goes wrong, destroy the machine and rebuild it with vagrant up
+- vagrant halt: shutdown the machine
+- vagrant reload: restart the machine
+- vargant provision: provision the machine with all chef's recipes
+- vagrant box add box-name / box-url: download the base box (this step is included in vagrant up, but we can still pre-download it)
+- vagrant suspend: hibernate the machine, you can later resume it with vagrant resume
+- vagrant ssh: connect to the local virtual machine via ssh
 
 ####Common issues
 - RuntimeError: Couldn't determine Berks version<br>
