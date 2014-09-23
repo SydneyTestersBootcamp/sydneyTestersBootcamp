@@ -24,6 +24,7 @@
 # installing JDK 7
 # execute "install-jdk7" do
 #   command <<-EOH
+#     apt-get install software-properties-common python-software-properties
 #     add-apt-repository ppa:webupd8team/java
 #     apt-get update
 #     apt-get install oracle-java7-installer
