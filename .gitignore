@@ -1,1 +1,3 @@
 *.log
+*/.vagrant/*
+*/rvm-stable/*
