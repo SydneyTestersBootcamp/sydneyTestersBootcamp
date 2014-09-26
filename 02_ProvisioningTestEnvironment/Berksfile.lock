@@ -1,0 +1,7 @@
+DEPENDENCIES
+  machines
+    path: .
+    metadata: true
+
+GRAPH
+  machines (0.1.0)
