@@ -20,6 +20,10 @@ Choose Vagrant for your prefer OS from: https://www.vagrantup.com/downloads.html
 https://www.virtualbox.org/wiki/Downloads
 - Install ChefDK<br>
 http://downloads.getchef.com/chef-dk/
+- Install DevKit (Windows user only)<br>
+This package is to support Ruby to build native package (for gem installation). You can find it at http://rubyinstaller.org/downloads<br>
+You should choose a non-space in full path as the destination for the kit. i.e C:\Hashicorp\DevKit<br>
+Then go to the DevKit folder to run devkitvars.bat
 
 ######Important time saving note
 Since creating first virtual machine would trigger downloading of hundred of megabytes, please run below command prior coming to the session
