@@ -26,7 +26,7 @@ Since creating first virtual machine would trigger downloading of hundred of meg
 ```sh
 vagrant box add chef/ubuntu-14.04
 ```
-this would trigger downloading the base virtual box for ubuntu 14.04 x64
+and select option 1 (Virtual Box), this would trigger downloading the base virtual box for ubuntu 14.04 x64
 
 ######Ruby and related Gems
 - For Unix:
@@ -72,7 +72,9 @@ vagrant ssh
 ####Common issues
 - RuntimeError: Couldn't determine Berks version<br>
 You would need to add chefdk/bin in front of your PATH
-
+- The directory where plugins are installed (the Vagrant home directory) has a space in it...
+For Windows user only, you can fix this by moving the .vagrant.d to a folder that has no space in the full path, and set the system variable VAGRANT_HOME=new_path_to_vagrant.d<br>
+i.e: VAGRANT_HOME=C:\HashiCorp\.vagrant.d
 
 ####Reading Material
 - Mischa Taylor's Coding Blog:<br>
