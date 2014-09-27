@@ -73,7 +73,7 @@ vagrant ssh
 - RuntimeError: Couldn't determine Berks version<br>
 You would need to add chefdk/bin in front of your PATH
 - The directory where plugins are installed (the Vagrant home directory) has a space in it...
-For Windows user only, you can fix this by moving the .vagrant.d to a folder that has no space in the full path, and set the system variable VAGRANT_HOME=new_path_to_vagrant.d<br>
+For Windows user only, you can use `echo %username%` to get username and you can fix this by moving the .vagrant.d to a folder that has no space in the full path, and set the system variable VAGRANT_HOME=new_path_to_vagrant.d<br>
 i.e: VAGRANT_HOME=C:\HashiCorp\.vagrant.d
 
 ####Reading Material
