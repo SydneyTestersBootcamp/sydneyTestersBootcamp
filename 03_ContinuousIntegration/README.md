@@ -35,11 +35,10 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 1. Ruby (>= 2.0)
 2. Virtualbox <br>https://www.virtualbox.org/wiki/Downloads</br><br>This tool runs the VMs that we'll use for the workshop
 3. Vagrant <br>https://www.vagrantup.com/downloads.html</br><br>This tool manages the VMs - download and install them, start them up, shut them down etc
-4. vagrant-omnibus plugin (`vagrant plugin install vagrant-omnibus`) <br>This plugin installs chef onto the VM
-5. berkshelf (`gem install berkshelf --no-ri --no-rdoc`) <br>This plugin fetches required chef cookbooks for packages that need to be istalled
-6. chefdk <br>http://downloads.getchef.com/chef-dk/</br>
-7. vagrant berkshelf plugin (`vagrant plugin install vagrant-berkshelf`)
-8. Git <br>http://downloads.getchef.com/chef-dk/</br>
+4. vagrant-omnibus plugin (`vagrant plugin install vagrant-omnibus`) <br>This plugin installs chef onto the VM that doesnt already have chef installed
+5. chefdk <br>http://downloads.getchef.com/chef-dk/</br><br>This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be istalled
+6. vagrant berkshelf plugin (`vagrant plugin install vagrant-berkshelf`)
+7. Git <br>http://downloads.getchef.com/chef-dk/</br>
 
 NOTE: If you attended last week's session on Provisioning Environments, you'd already have these installed.
 
