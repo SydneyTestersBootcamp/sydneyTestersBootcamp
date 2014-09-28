@@ -36,7 +36,7 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 2. Virtualbox <br>https://www.virtualbox.org/wiki/Downloads</br><br>This tool runs the VMs that we'll use for the workshop
 3. Vagrant <br>https://www.vagrantup.com/downloads.html</br><br>This tool manages the VMs - download and install them, start them up, shut them down etc
 4. vagrant-omnibus plugin (`vagrant plugin install vagrant-omnibus`) <br>This plugin installs chef onto the VM that doesnt already have chef installed
-5. chefdk <br>http://downloads.getchef.com/chef-dk/</br><br>This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be istalled
+5. chefdk <br>http://downloads.getchef.com/chef-dk/</br><br>This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed<br> Once installed, please make sure the path to `berks` is at the BEGINNING of your PATH variable (ie. PATH=/opt/chefdk/bin:$PATH)
 6. vagrant berkshelf plugin (`vagrant plugin install vagrant-berkshelf`)
 7. Git <br>http://downloads.getchef.com/chef-dk/</br>
 
