@@ -1,4 +1,7 @@
 DEPENDENCIES
+  CI_Server
+    path: .
+    metadata: true
   apt
   bundler
   git
@@ -6,6 +9,7 @@ DEPENDENCIES
   phantomjs
 
 GRAPH
+  CI_Server (0.1.0)
   apt (2.6.0)
   build-essential (2.0.6)
   bundler (0.2.0)

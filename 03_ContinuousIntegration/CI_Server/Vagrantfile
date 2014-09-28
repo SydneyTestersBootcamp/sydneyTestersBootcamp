@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+require 'berkshelf/vagrant'
+
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -17,7 +19,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.berkshelf.enabled = true
 
   config.vm.provision "chef_solo" do |chef|
-    #chef.cookbooks_path = "../cookbooks"
     chef.add_recipe "apt"
     #chef.add_recipe "jenkins"
     chef.add_recipe "git"
