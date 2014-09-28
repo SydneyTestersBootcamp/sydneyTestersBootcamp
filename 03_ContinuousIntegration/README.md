@@ -32,14 +32,16 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 
 #####1. Install the below software. Google them to find installers.
 
-1. [Ruby](https://www.ruby-lang.org/en/) <br>(version 2.1.2 preferred)
-2. [Virtualbox](https://www.virtualbox.org/) <br>This tool runs the VMs that we'll use for the workshop
-3. [Vagrant](https://www.vagrantup.com/) <br>This tool manages the VMs - download and install them, start them up, shut them down etc
-4. [vagrant-omnibus plugin](https://github.com/opscode/vagrant-omnibus) <br>This plugin installs chef onto the VM that doesnt already have chef installed <br>Install it from the commandline by running `vagrant plugin install vagrant-omnibus`
-5. [chefdk](https://downloads.getchef.com/chef-dk) <br>This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, please make sure the path to `berks` is at the BEGINNING of your PATH variable (ie. PATH=/opt/chefdk/bin:$PATH)
-6. [vagrant berkshelf plugin](http://berkshelf.com/) <br>Install it from the commandline by running `vagrant plugin install vagrant-berkshelf`
-7. [test-kitchen](http://kitchen.ci/) <br>Install it from the commandline by running `gem install test-kitchen`
-8. [Git](http://git-scm.com/) <br>This is the source control tool that we'll use for the workshop
+| Tool/Software | Notes |
+| ------------- | ----- |
+| [Ruby](https://www.ruby-lang.org/en/) | version 2.1.2 preferred |
+| [Virtualbox](https://www.virtualbox.org/) | This tool runs the VMs that we'll use for the workshop |
+| [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - download and install them, start them up, shut them down etc |
+| [vagrant-omnibus plugin](https://github.com/opscode/vagrant-omnibus) | This plugin installs chef onto the VM that doesnt already have chef installed <br>Install it from the commandline by running `vagrant plugin install vagrant-omnibus` |
+| [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, please make sure the path to `berks` is at the BEGINNING of your PATH variable (ie. PATH=/opt/chefdk/bin:$PATH) |
+| [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` |
+| [test-kitchen](http://kitchen.ci/) | Install it from the commandline by running `gem install test-kitchen` |
+| [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop |
 
 NOTE: If you attended last week's session on Provisioning Environments, you'd already have most of these installed (all except for 'test-kitchen').
 
