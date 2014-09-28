@@ -1,4 +1,4 @@
 *.log
-*/.vagrant/*
 */rvm-stable/*
 .vagrant/
+*/cookbooks/*

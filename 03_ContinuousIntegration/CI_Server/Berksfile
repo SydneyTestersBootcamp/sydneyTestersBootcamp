@@ -1,0 +1,7 @@
+source "https://supermarket.getchef.com"
+
+cookbook "apt"
+cookbook "jenkins"
+cookbook "git"
+cookbook "bundler"
+cookbook "phantomjs"

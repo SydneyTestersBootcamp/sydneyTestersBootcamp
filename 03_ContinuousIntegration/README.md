@@ -2,7 +2,7 @@
 
 The aim of this session is to set up a CI Server & agent (Jenkins) to start a build and run tests everytime a developer checks in code. 
 
-This workshop follows on from last week's session about provisioning environments. We'll use some of what you learned there to build the CI server and agent VMs.
+This workshop follows on from last week's session about provisioning environments (using chef & vagrant to manage virtualbox VMs). We'll use some of what you learned there to build the CI server and agent VMs.
 
 Contents:
 - What is CI and why is it needed?
@@ -32,12 +32,15 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 
 #####1. Install the below software. Google them to find installers.
 
-1. Ruby (>= 2.0) **
-2. Virtualbox **
-3. Vagrant **
-4. Git
+1. Ruby (>= 2.0)
+2. Virtualbox <br>https://www.virtualbox.org/wiki/Downloads</br><br>This tool runs the VMs that we'll use for the workshop
+3. Vagrant <br>https://www.vagrantup.com/downloads.html</br><br>This tool manages the VMs - download and install them, start them up, shut them down etc
+4. vagrant-omnibus plugin (`vagrant plugin install vagrant-omnibus`) <br>This plugin installs chef onto the VM
+5, vagrant berkshelf plugin (`vagrant plugin install vagrant-berkshelf`) <br>This plugin fetches required chef cookbooks for packages that need to be istalled
+6. chefdk <br>http://downloads.getchef.com/chef-dk/</br>
+7. Git <br>http://downloads.getchef.com/chef-dk/</br>
 
-** If you attended last week's session on Provisioning Environments, you'd already have these.
+NOTE: If you attended last week's session on Provisioning Environments, you'd already have these installed.
 
 #####2. Create an account on github.com if you dont already have one.
 
@@ -53,7 +56,7 @@ and then:
 
 `vagrant up`
 
-This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so please do this before coming for the session. You may want to do this on a wifi connection due to the large data download.
+This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
 Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
 
@@ -66,8 +69,12 @@ and then:
 
 `vagrant up`
 
-This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so please do this before coming for the session. You may want to do this on a wifi connection due to the large data download.
+This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
 Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
 
 Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant down` to shut down the VM.
+
+####Common issues
+- RuntimeError: Couldn't determine Berks version<br>
+You would need to add /opt/chefdk/bin at the front of your PATH
