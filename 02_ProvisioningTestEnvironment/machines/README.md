@@ -74,8 +74,8 @@ vagrant ssh
 
 ####Common issues
 - RuntimeError: Couldn't determine Berks version<br>
-You would need to add chefdk/bin in front of your PATH<br>
-For MacOSX: default chefdk is at /opt/chefdk/bin
+You would need to add chefdk/bin **at front of your PATH**<br>
+For MacOSX: default chefdk is at /opt/chefdk/bin<br>
 For Windows: default chefdk is at C:\opscode\chefdk\bin
 - The directory where plugins are installed (the Vagrant home directory) has a space in it...
 For Windows user only, you can use `echo %username%` to get username and you can fix this by moving the .vagrant.d to a folder that has no space in the full path, and set the system variable VAGRANT_HOME=new_path_to_vagrant.d<br>
