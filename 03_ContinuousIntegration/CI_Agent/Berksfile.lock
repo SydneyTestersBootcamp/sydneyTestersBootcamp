@@ -1,0 +1,7 @@
+DEPENDENCIES
+  CI_Agent
+    path: .
+    metadata: true
+
+GRAPH
+  CI_Agent (0.1.0)
