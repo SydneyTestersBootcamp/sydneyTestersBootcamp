@@ -40,7 +40,6 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 - For Windows: download and install Ruby from http://rubyinstaller.org/downloads/
 - Installing require gems and vagrant plugins:
 ```sh
-gem install berkshelf --no-ri --no-rdoc
 sudo gem install bundler
 vagrant plugin install vagrant-berkshelf
 vagrant plugin install vagrant-omnibus
