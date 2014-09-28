@@ -5,5 +5,7 @@ metadata
 cookbook "apt"
 cookbook "jenkins"
 cookbook "git"
+cookbook "rvm"
+cookbook "ruby"
 cookbook "bundler"
 cookbook "phantomjs"

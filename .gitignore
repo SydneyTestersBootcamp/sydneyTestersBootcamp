@@ -2,3 +2,5 @@
 */rvm-stable/*
 .vagrant/
 */cookbooks/*
+*/.kitchen/*
+03_ContinuousIntegration/CI_Agent/.kitchen/*

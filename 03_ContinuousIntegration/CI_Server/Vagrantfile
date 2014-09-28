@@ -20,10 +20,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "chef_solo" do |chef|
     chef.add_recipe "apt"
-    #chef.add_recipe "jenkins"
     chef.add_recipe "git"
-    chef.add_recipe "bundler"
     chef.add_recipe "phantomjs"
+    chef.add_recipe "rvm"
+    #chef.add_recipe "bundler"
   end
 
 end
