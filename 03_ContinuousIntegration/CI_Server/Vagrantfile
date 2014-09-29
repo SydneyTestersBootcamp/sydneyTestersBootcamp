@@ -8,6 +8,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "chef/ubuntu-14.04"
+  config.vm.hostname = "ciserver"
   config.vm.network "forwarded_port", guest: 8080, host: 9080
   config.vm.synced_folder "../Installers", "/Installers"
   
@@ -33,7 +34,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       'recipe[git]',
       'recipe[phantomjs]',
       'recipe[rvm::system]',
-      'recipe[rvm::gem_package]'
+      'recipe[rvm::gem_package]',
+      'recipe[jenkins::master]'
     ]
     
   end

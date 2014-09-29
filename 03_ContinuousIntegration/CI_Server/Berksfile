@@ -3,7 +3,7 @@ source "https://supermarket.getchef.com"
 metadata
 
 cookbook "apt"
-cookbook "jenkins"
 cookbook "git"
+cookbook "jenkins", git: 'git://github.com/opscode-cookbooks/jenkins.git'
 cookbook "rvm"
 cookbook "phantomjs"
