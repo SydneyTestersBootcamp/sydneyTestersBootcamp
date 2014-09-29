@@ -59,7 +59,9 @@ and then:
 
 `vagrant up`
 
-This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
+This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time (more than 30 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
+
+NOTE: If you attended last week's session on Provisioning Environments, you'd already have the Virualbox VM, so `vagrant up` will not redownload it. However, it will download and install the required packages (ruby, rvm, phantomjs etc)
 
 Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
 
