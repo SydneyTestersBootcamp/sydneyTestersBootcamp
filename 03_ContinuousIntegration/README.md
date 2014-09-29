@@ -57,11 +57,11 @@ and then:
 
 `vagrant up`
 
-This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time (over 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
+The first time you run this command, it downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time (over 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
-NOTE: If you attended last week's session on Provisioning Environments, you'd already have the Virualbox VM, so `vagrant up` will not redownload it. However, it will download and install the required packages (ruby, rvm, java, phantomjs etc)
+NOTE: If you attended last week's session on Provisioning Environments, you'd already have the Virualbox VM, so `vagrant up` will not redownload it. However, it will download and install the required packages (ruby, rvm, java, phantomjs etc).
 
-Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6 or so.
+Once the above is done, open up a browser and navigate to http://localhost:9080. You should be able to see the Jenkins admin page.
 
 Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
@@ -72,9 +72,9 @@ and then:
 
 `vagrant up`
 
-This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so <b><font color="red">please do this before coming for the session</font></b>. You may want to do this on a wifi connection due to the large data download.
+This may take a long time, so <b><font color="red">please do this before coming for the session</font></b>. You may want to do this on a wifi connection due to the large data download.
 
-Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6 or so.
+Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6.
 
 Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
