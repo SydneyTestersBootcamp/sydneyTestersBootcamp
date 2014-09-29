@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.box = "chef/ubuntu-14.04"
+  config.vm.box = "mobileoverlord/centos-6.5"
   config.vm.hostname = "ciagent"
   config.vm.network "forwarded_port", guest: 8080, host: 9090
   config.vm.synced_folder "../Installers", "/Installers"
@@ -16,14 +16,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.destroy_unused_network_interfaces = true
   end
   
-  config.omnibus.chef_version = :latest
   config.berkshelf.enabled = true
 
   config.vm.provision "chef_solo" do |chef|
-    chef.add_recipe "apt"
-    chef.cookbooks_path = "./"
+    #chef.add_recipe "apt"
+    #chef.add_recipe "git"
+    #chef.add_recipe "phantomjs"
+    #chef.add_recipe "java"
+    #chef.add_recipe "CI_Agent::default"
+    
     chef.run_list = [
-        "recipe[CI_Agent::default]"
+      'recipe[apt]',
+      'recipe[git]',
+      'recipe[phantomjs]',
+      'recipe[java]',
+      'recipe[CI_Agent::default]'
     ]
   end
 

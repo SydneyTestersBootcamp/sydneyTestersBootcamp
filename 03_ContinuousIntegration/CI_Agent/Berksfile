@@ -1,3 +1,9 @@
 source "https://supermarket.getchef.com"
 
 metadata
+
+cookbook "apt"
+cookbook "git"
+cookbook "phantomjs"
+cookbook "java"
+#cookbook 'CI_Agent', path: './'

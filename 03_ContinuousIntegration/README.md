@@ -37,13 +37,11 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 | [Ruby](https://www.ruby-lang.org/en/) | version 2.1.2 preferred |
 | [Virtualbox](https://www.virtualbox.org/) | This tool runs the VMs that we'll use for the workshop |
 | [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - download and install them, start them up, shut them down etc |
-| [vagrant-omnibus plugin](https://github.com/opscode/vagrant-omnibus) | This plugin installs chef onto the VM that doesnt already have chef installed <br>Install it from the commandline by running `vagrant plugin install vagrant-omnibus` |
 | [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, please make sure the path to `berks` is at the BEGINNING of your PATH variable (ie. PATH=/opt/chefdk/bin:$PATH) |
 | [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` |
-| [test-kitchen](http://kitchen.ci/) | Install it from the commandline by running `gem install test-kitchen` |
 | [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop |
 
-NOTE: If you attended last week's session on Provisioning Environments, you'd already have most of these installed (all except for 'test-kitchen').
+NOTE: If you attended last week's session on Provisioning Environments, you'd already have all these installed.
 
 #####2. Create an account on [github.com](https://github.com/) if you dont already have one.
 
@@ -59,13 +57,13 @@ and then:
 
 `vagrant up`
 
-This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time (more than 30 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
+This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time (over 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
-NOTE: If you attended last week's session on Provisioning Environments, you'd already have the Virualbox VM, so `vagrant up` will not redownload it. However, it will download and install the required packages (ruby, rvm, phantomjs etc)
+NOTE: If you attended last week's session on Provisioning Environments, you'd already have the Virualbox VM, so `vagrant up` will not redownload it. However, it will download and install the required packages (ruby, rvm, java, phantomjs etc)
 
-Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
+Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6 or so.
 
-Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant down` to shut down the VM.
+Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
 #####5. Set up the CI Agent VM that we'll use for the workshop
 `cd 03_ContinuousIntegration\CI_Agent`
@@ -76,9 +74,9 @@ and then:
 
 This downloads a Vritualbox VM ~500 MB in size, installs a few packages onto it, and starts it up. This may take a long time, so <b><font color="red">please do this before coming for the session</font></b>. You may want to do this on a wifi connection due to the large data download.
 
-Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.7 or so.
+Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6 or so.
 
-Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant down` to shut down the VM.
+Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
 ####Common issues
 - RuntimeError: Couldn't determine Berks version<br>

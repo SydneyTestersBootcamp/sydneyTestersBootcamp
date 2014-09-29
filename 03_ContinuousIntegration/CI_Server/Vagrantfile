@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.box = "chef/ubuntu-14.04"
+  config.vm.box = "mobileoverlord/centos-6.5"
   config.vm.hostname = "ciserver"
   config.vm.network "forwarded_port", guest: 8080, host: 9080
   config.vm.synced_folder "../Installers", "/Installers"
@@ -15,27 +15,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :virtualbox do |vb|
     vb.destroy_unused_network_interfaces = true
   end
-  
-  config.omnibus.chef_version = :latest
+
   config.berkshelf.enabled = true
 
   config.vm.provision "chef_solo" do |chef|
-    
-    chef.json = {
-      'rvm' => {
-        'rubies'        => ['2.1.2'],
-        'default_ruby'  => '2.1.2',
-        'global_gems'   => [{ 'name'    => 'bundler' }]
-      }
-    }
     
     chef.run_list = [
       'recipe[apt]',
       'recipe[git]',
       'recipe[phantomjs]',
-      'recipe[rvm::system]',
-      'recipe[rvm::gem_package]',
-      'recipe[jenkins::master]'
+      'recipe[java]'
     ]
     
   end
