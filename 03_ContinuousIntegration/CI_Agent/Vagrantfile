@@ -13,21 +13,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "../Installers", "/Installers"
   
   config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
     vb.destroy_unused_network_interfaces = true
   end
   
   config.berkshelf.enabled = true
 
   config.vm.provision "chef_solo" do |chef|
-    #chef.add_recipe "apt"
-    #chef.add_recipe "git"
-    #chef.add_recipe "phantomjs"
-    #chef.add_recipe "java"
-    #chef.add_recipe "CI_Agent::default"
+    chef.json = {
+      'rvm' => {
+         'rubies' => ["2.1.2"],
+         'default_ruby' => "2.1.2",
+      }
+    }
     
     chef.run_list = [
       'recipe[apt]',
       'recipe[git]',
+      'recipe[rvm::system]',
       'recipe[phantomjs]',
       'recipe[java]',
       'recipe[CI_Agent::default]'
