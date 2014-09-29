@@ -3,19 +3,15 @@ DEPENDENCIES
     path: .
     metadata: true
   apt
-  bundler
   git
   jenkins
   phantomjs
-  ruby
   rvm
 
 GRAPH
   CI_Server (0.1.0)
   apt (2.6.0)
   build-essential (2.0.6)
-  bundler (0.2.0)
-    rubygems (>= 0.0.0)
   chef_gem (0.1.0)
   chef_handler (1.1.6)
   chocolatey (0.2.0)
@@ -36,8 +32,6 @@ GRAPH
   phantomjs (1.0.3)
     build-essential (>= 0.0.0)
     chocolatey (>= 0.0.0)
-  ruby (0.9.2)
-  rubygems (0.3.0)
   runit (1.5.10)
     build-essential (>= 0.0.0)
     yum (~> 3.0)
