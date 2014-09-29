@@ -53,7 +53,7 @@ git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 
 - Bring up the machine
 ```sh
-cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment
+cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment/machines
 bundle install
 vagrant up
 ```
