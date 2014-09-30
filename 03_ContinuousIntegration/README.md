@@ -36,8 +36,8 @@ http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-j
 | ------------- | ----- |
 | [Ruby](https://www.ruby-lang.org/en/) | version 2.1.2 preferred |
 | [Virtualbox](https://www.virtualbox.org/) | This tool runs the VMs that we'll use for the workshop |
-| [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - download and install them, start them up, shut them down etc |
-| [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, please make sure the path to `berks` is at the BEGINNING of your PATH variable (ie. PATH=/opt/chefdk/bin:$PATH) |
+| [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - download and install them, start them up, shut them down etc. You'll need version 1.6.3 or later. |
+| [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, run the command `which berks` (on osx or linux). The output should look like `/usr/bin/berk` which should be a link to `/opt/chefdk/bin` (You can check that by running `ls -l /usr/bin/berk`). If this is set incorrect, please tweak your PATH so that your system picks up `berk` from the right location.|
 | [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` |
 | [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop |
 
