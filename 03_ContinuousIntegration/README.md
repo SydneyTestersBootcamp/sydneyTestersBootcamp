@@ -63,7 +63,7 @@ NOTE: If you attended last week's session on Provisioning Environments, you'd al
 
 Once the above is done, open up a browser and navigate to http://localhost:9080. You should be able to see the Jenkins admin page.
 
-Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
+Now run the command `vagrant suspend` to suspend the VM.
 
 #####5. Set up the CI Agent VM that we'll use for the workshop
 `cd 03_ContinuousIntegration\CI_Agent`
