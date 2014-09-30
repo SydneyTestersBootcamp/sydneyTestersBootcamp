@@ -35,6 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       'recipe[java]',
       'recipe[CI_Agent::default]'
     ]
+    chef.log_level = :debug
   end
 
 end
