@@ -61,7 +61,7 @@ The first time you run this command, it downloads a Vritualbox VM ~500 MB in siz
 
 NOTE: If you attended last week's session on Provisioning Environments, you'd already have the Virualbox VM, so `vagrant up` will not redownload it. However, it will download and install the required packages (ruby, rvm, java, phantomjs etc).
 
-Once the above is done, open up a browser and navigate to http://localhost:9080. You should be able to see the Jenkins admin page.
+Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.
 
 Now run the command `vagrant suspend` to suspend the VM.
 

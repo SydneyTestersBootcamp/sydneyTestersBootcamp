@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "ciserver"
   config.vm.network "forwarded_port", guest: 8080, host: 9080
   config.vm.synced_folder "../Installers", "/Installers"
-  #config.vm.synced_folder "/Users/hansdushanthakumar/Workspace/quickquote", "/quickquote"
+  #config.vm.synced_folder "/Users/hansdushanthakumar/Workspace/new_quickquote/quickquote", "/quickquote"
   
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "2048"]
