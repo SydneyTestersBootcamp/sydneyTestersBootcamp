@@ -9,11 +9,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "mobileoverlord/centos-6.5"
   config.vm.hostname = "ciagent"
+  config.vm.network "private_network", type: "dhcp"
   config.vm.network "forwarded_port", guest: 8080, host: 9090
   config.vm.synced_folder "../Installers", "/Installers"
   
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
     vb.destroy_unused_network_interfaces = true
   end
   
@@ -24,6 +25,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       'rvm' => {
          'rubies' => ["2.1.2"],
          'default_ruby' => "2.1.2",
+         'global_gems' => [{ name: 'bundler' },
+                           { name: 'rake' }]
       }
     }
     

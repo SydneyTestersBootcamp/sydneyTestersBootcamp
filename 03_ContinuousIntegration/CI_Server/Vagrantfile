@@ -9,12 +9,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "mobileoverlord/centos-6.5"
   config.vm.hostname = "ciserver"
+  config.vm.network "private_network", type: "dhcp"
   config.vm.network "forwarded_port", guest: 8080, host: 9080
   config.vm.synced_folder "../Installers", "/Installers"
-  #config.vm.synced_folder "/Users/hansdushanthakumar/Workspace/new_quickquote/quickquote", "/quickquote"
   
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
     vb.destroy_unused_network_interfaces = true
   end
 
@@ -27,8 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
          'rubies' => ["2.1.2"],
          'default_ruby' => "2.1.2",
          'global_gems' => [{ name: 'bundler' },
-                           { name: 'rake' }],
-         'vagrant' => { system_chef_solo: '/usr/bin/chef-solo' }
+                           { name: 'rake' }]
       }
     }
     
@@ -36,7 +35,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       'recipe[apt]',
       'recipe[git]',
       'recipe[rvm::system]',
-      'recipe[rvm::vagrant]',
       'recipe[phantomjs]',
       'recipe[java]',
       'recipe[CI_Server::default]'
