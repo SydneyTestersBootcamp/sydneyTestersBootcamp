@@ -28,7 +28,9 @@ Then go to the DevKit folder to run devkitvars.bat
 ######Important time saving note
 Since creating first virtual machine would trigger downloading of hundred of megabytes, please run below command prior coming to the session
 ```sh
+cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment/machines (if you're not in the machines folder)
 vagrant box add chef/ubuntu-14.04
+bundle install
 ```
 and select option 1 (Virtual Box), this would trigger downloading the base virtual box for ubuntu 14.04 x64
 
