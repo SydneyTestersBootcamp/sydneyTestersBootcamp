@@ -39,7 +39,7 @@ If you have difficulties installing them on your machine, please Google the erro
 | [Virtualbox](https://www.virtualbox.org/) | This tool runs the Virtual Machines (VMs) that we'll use for the workshop | You should be able to see the application 'VirtualBox' in your 'All Programs' (Windows) or 'Applications' (OSX). Try starting it up. <br><br>Expected outcome: The VirtualBox application should start up fine.|
 | [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - downloads and install them, install dependancies, start them up, shut them down etc. You'll need version 1.6.3 or later. <br><b>NOTE: Windows users, please install vagrant into a folder that does not have spaces in the name, eg 'c:\vagrant' </b> | Run `vagrant --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version 1.6.3 or greater. |
 | [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, run the command `which berks` (on osx or linux). The output should look like `/usr/bin/berk` which should be a link to `/opt/chefdk/bin` (You can check that by running `ls -l /usr/bin/berk`). If this is set incorrect, please tweak your PATH so that your system picks up `berk` from the right location.| Run `berks --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version 3.1.5 or greater. |
-| [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` | Not sure how to test this. Pray? |
+| [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` | ~~Pray?~~ Not sure how to test this. |
 | [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop | Run `git --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version 1.9.3 or greater. |
 
 
@@ -63,21 +63,23 @@ This cloning could take a while. Once done, go into the session folder in your C
 
 #####4. Set up the CI Server VM that we'll use for the workshop
 
-Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
+<ol>
+<li>Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
 
-`cd CI_Server`
+`cd CI_Server`</li>
 
-and run:
+<li>And run:
 
 `vagrant up`
 
 The first time you run this command, it downloads a Vritualbox VM ~500 MB in size (Centos Linux), installs a few packages onto it, and starts it up. This may take a long time (upto 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
-You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds"
+You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds"</li>
 
-Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.
+<li>Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.</li>
 
-Now run the command `vagrant suspend` to suspend the VM.
+<li>Now run the command `vagrant suspend` to suspend the VM.</li>
+</ol>
 
 #####5. Set up the CI Agent VM that we'll use for the workshop
 
