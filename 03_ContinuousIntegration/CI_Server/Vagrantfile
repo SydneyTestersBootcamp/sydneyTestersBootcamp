@@ -1,0 +1,45 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+require 'berkshelf/vagrant'
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.box = "mobileoverlord/centos-6.5"
+  config.vm.hostname = "ciserver"
+  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "forwarded_port", guest: 8080, host: 9080
+  config.vm.synced_folder "../Installers", "/Installers"
+  
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.destroy_unused_network_interfaces = true
+  end
+
+  config.berkshelf.enabled = true
+
+  config.vm.provision "chef_solo" do |chef|
+    
+    chef.json = {
+      'rvm' => {
+         'rubies' => ["2.1.2"],
+         'default_ruby' => "2.1.2",
+         'global_gems' => [{ name: 'bundler' },
+                           { name: 'rake' }]
+      }
+    }
+    
+    chef.run_list = [
+      'recipe[apt]',
+      'recipe[git]',
+      'recipe[rvm::system]',
+      'recipe[phantomjs]',
+      'recipe[java]',
+      'recipe[CI_Server::default]'
+    ]
+    chef.log_level = :debug
+    
+  end
+end

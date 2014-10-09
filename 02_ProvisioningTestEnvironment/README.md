@@ -20,13 +20,19 @@ Choose Vagrant for your prefer OS from: https://www.vagrantup.com/downloads.html
 https://www.virtualbox.org/wiki/Downloads
 - Install ChefDK<br>
 http://downloads.getchef.com/chef-dk/
+- Install DevKit (Windows user only)<br>
+This package is to support Ruby to build native package (for gem installation). You can find it at http://rubyinstaller.org/downloads<br>
+You should choose a non-space in full path as the destination for the kit. i.e C:\Hashicorp\DevKit<br>
+Then go to the DevKit folder to run devkitvars.bat
 
 ######Important time saving note
 Since creating first virtual machine would trigger downloading of hundred of megabytes, please run below command prior coming to the session
 ```sh
+cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment/machines (if you're not in the machines folder)
 vagrant box add chef/ubuntu-14.04
+bundle install
 ```
-this would trigger downloading the base virtual box for ubuntu 14.04 x64
+and select option 1 (Virtual Box), this would trigger downloading the base virtual box for ubuntu 14.04 x64
 
 ######Ruby and related Gems
 - For Unix:
@@ -36,7 +42,6 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 - For Windows: download and install Ruby from http://rubyinstaller.org/downloads/
 - Installing require gems and vagrant plugins:
 ```sh
-gem install berkshelf --no-ri --no-rdoc
 sudo gem install bundler
 vagrant plugin install vagrant-berkshelf
 vagrant plugin install vagrant-omnibus
@@ -50,7 +55,7 @@ git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 
 - Bring up the machine
 ```sh
-cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment
+cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment/machines
 bundle install
 vagrant up
 ```
@@ -70,9 +75,13 @@ vagrant ssh
 - vagrant ssh: connect to the local virtual machine via ssh
 
 ####Common issues
-- RuntimeError: Couldn't determine Berks version<br>
-You would need to add chefdk/bin in front of your PATH
-
+- *RuntimeError: Couldn't determine Berks version*<br>
+You would need to add chefdk/bin **at front of your PATH**<br>
+For MacOSX: default chefdk is at /opt/chefdk/bin<br>
+For Windows: default chefdk is at C:\opscode\chefdk\bin
+- *The directory where plugins are installed (the Vagrant home directory) has a space in it...*<br>
+For Windows user only, you can use `echo %username%` to get username and you can fix this by moving the .vagrant.d to a folder that has no space in the full path, and set the system variable VAGRANT_HOME=new_path_to_vagrant.d<br>
+i.e: VAGRANT_HOME=C:\HashiCorp\.vagrant.d
 
 ####Reading Material
 - Mischa Taylor's Coding Blog:<br>

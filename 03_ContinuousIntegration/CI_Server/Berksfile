@@ -1,0 +1,9 @@
+source "https://supermarket.getchef.com"
+
+metadata
+
+cookbook "apt"
+cookbook "git"
+cookbook "java"
+cookbook "phantomjs"
+cookbook "rvm"
