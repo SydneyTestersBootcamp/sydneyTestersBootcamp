@@ -24,18 +24,14 @@ http://www.martinfowler.com/articles/continuousIntegration.html
 
 http://en.wikipedia.org/wiki/Continuous_integration
 
-######Internal reference:
-
-http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-jenkins-part-i
-
 
 ####Pre-requisites
 
 #####1. Install the below software.
 
-Note: Unless versions are specified, download and install the latest versions. If you have these installed already (from previous sessions), you do not need to reinstall them.
+Note: Unless versions are specified, install the latest versions. If you have these installed already (from previous sessions), you do not need to reinstall them.
 
-If you have difficulties installing them on your machine, please Google the errors that you see. There's a good chance someone has seen the same before and has a solution. If that did not help resolve it, please post a question on the meetup events page. Please try to get these resolved and have everything already setup before the session.
+If you have difficulties installing them on your machine, please Google the errors that you see. There's a good chance someone has seen the same before and has a solution. If that did not help resolve it, please post a question on the meetup events page. <b>Please try to get these resolved and have everything already setup before the session.</b>
 
 | Tool/Software | Notes | How to test if this is installed fine |
 | ------------- | ----- | ------------------------------------- |
@@ -54,7 +50,7 @@ If you have difficulties installing them on your machine, please Google the erro
 On your Browser, navigate to:
 [https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp](https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp)
 
-On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> https://github.com/<Your Github username>/sydneyTestersBootcamp
+On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> [https://github.com/<Your Github username>/sydneyTestersBootcamp](#)
 
 #####3. Clone the forked repository into your local machine (Skip this step if you have already done this for previous sessions).
 
