@@ -55,7 +55,7 @@ On your Browser, navigate to:
 
 On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> [https://github.com/your github username/sydneyTestersBootcamp](#)
 
-#####3. Clone the forked repository into your local machine (Skip this step if you have already done this for previous sessions).
+#####4. Clone the forked repository into your local machine (Skip this step if you have already done this for previous sessions).
 
 On your machine, open the command prompt or Terminal, and clone the repo by running:<br>
 `git clone https://github.com/<your github username>/sydneyTestersBootcamp --depth 1`
@@ -64,7 +64,20 @@ This should create a folder 'sydneyTestersBootcamp' in your machine. This folder
 
 This cloning could take a while. Once done, go into the session folder in your Command Prompt/Terminal<br> `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
 
-#####4. Set up the CI Server VM that we'll use for the workshop
+#####5. Clone the forked repository into your local machine (This step is only for those of you who already have forked/cloned in previous sessions).
+
+On your machine, open the command prompt or Terminal, go to the folder where you had cloned the repo into (eg: `cd sydneyTestersBootcamp`).<br>
+
+Add a remote alias pointing to the original repo that you forked from:<br>
+`git remote add original https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git`
+
+Now pull in the latest changes from the original repo:<br>
+`git fetch original`
+
+Now merge the changes in the original into your local machine:<br>
+`git merge original/master`
+
+#####6. Set up the CI Server VM that we'll use for the workshop
 
 Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
 
@@ -82,7 +95,7 @@ Once the above is done, open up a browser and navigate to [http://localhost:9080
 
 Now run the command `vagrant suspend` to suspend the VM.
 
-#####5. Set up the CI Agent VM that we'll use for the workshop
+#####7. Set up the CI Agent VM that we'll use for the workshop
 
 Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Agent (Slave):
 
