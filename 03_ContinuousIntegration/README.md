@@ -50,36 +50,34 @@ If you have difficulties installing them on your machine, please Google the erro
 On your Browser, navigate to:
 [https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp](https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp)
 
-On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> [https://github.com/<Your Github username>/sydneyTestersBootcamp](#)
+On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> [https://github.com/your github username/sydneyTestersBootcamp](#)
 
 #####3. Clone the forked repository into your local machine (Skip this step if you have already done this for previous sessions).
 
-On your machine, open the command prompt or Terminal, and clone the repo by running:
-`git clone https://github.com/<your github user name>/sydneyTestersBootcamp --depth 1`
+On your machine, open the command prompt or Terminal, and clone the repo by running:<br>
+`git clone https://github.com/<your github username>/sydneyTestersBootcamp --depth 1`
 
 This should create a folder 'sydneyTestersBootcamp' in your machine. This folder has all the files needed for the bootcamp.
 
-This cloning could take a while. Once done, go into the session folder in your Command Prompt/Terminal `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
+This cloning could take a while. Once done, go into the session folder in your Command Prompt/Terminal<br> `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
 
 #####4. Set up the CI Server VM that we'll use for the workshop
 
-<ol>
-<li>Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
+Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
 
-`cd CI_Server`</li>
+`cd CI_Server`
 
-<li>And run:
+And run:
 
 `vagrant up`
 
 The first time you run this command, it downloads a Vritualbox VM ~500 MB in size (Centos Linux), installs a few packages onto it, and starts it up. This may take a long time (upto 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
-You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds"</li>
+You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds".
 
-<li>Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.</li>
+Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.
 
-<li>Now run the command `vagrant suspend` to suspend the VM.</li>
-</ol>
+Now run the command `vagrant suspend` to suspend the VM.
 
 #####5. Set up the CI Agent VM that we'll use for the workshop
 
