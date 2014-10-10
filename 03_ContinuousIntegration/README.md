@@ -77,6 +77,9 @@ Now pull in the latest changes from the original repo:<br>
 Now merge the changes in the original into your local machine:<br>
 `git merge original/master`
 
+If you see an error message that looks like "Please, commit your changes or stash them before you can merge. Aborting", then run:
+`git stash` and try the merge again.
+
 #####6. Set up the CI Server VM that we'll use for the workshop
 
 Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
