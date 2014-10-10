@@ -2,15 +2,17 @@
 
 The aim of this session is to help Tester to quickly set up Test / Dev environment on their own machine and share the configuration among team members.
 
-####Contents:
+####Agenda:
 
 - Common Tasks on setting up new Dev/Test Environment (without Chef/Vagrant)
 - Most common used Vagrant commands
 - Installing pre-require packages
-- Iteration 1: Installing base packages for the Guest VM
-- Iteration 2: Installing DB and creating seed data
-- Iteration 3: Loading latest code
-- Iteration 4: Handling the configuration to other members
+- Iteration 0: Prepare tools and ingredients
+- Iteration 1: First taste of Vagrant - Chef using default setting
+- Iteration 2: Adding some sugar - using available recipes
+- Iteration 3: Little bit of chilli - creating your first recipe
+- Iteration 4: Last check before committing
+- Iteration 5: Integrating the provision to project
 
 ####Installation Instruction
 ######Prerequisite packages:
