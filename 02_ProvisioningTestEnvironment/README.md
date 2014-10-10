@@ -5,8 +5,6 @@ The aim of this session is to help Tester to quickly set up Test / Dev environme
 ####Agenda:
 
 - Common Tasks on setting up new Dev/Test Environment (without Chef/Vagrant)
-- Most common used Vagrant commands
-- Installing pre-require packages
 - Iteration 0: Prepare tools and ingredients
 - Iteration 1: First taste of Vagrant - Chef using default setting
 - Iteration 2: Adding some sugar - using available recipes
