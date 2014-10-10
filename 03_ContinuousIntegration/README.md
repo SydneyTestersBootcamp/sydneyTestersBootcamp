@@ -29,7 +29,9 @@ http://en.wikipedia.org/wiki/Continuous_integration
 
 #####1. Install the below software.
 
-Note: Unless versions are specified, install the latest versions. If you have these installed already (from previous sessions), you do not need to reinstall them.
+Note: 
+- Unless versions are specified, install the <b>latest versions</b>. 
+- If you have these installed already (from previous sessions), you <b>do not need to reinstall</b> them.
 
 If you have difficulties installing them on your machine, please Google the errors that you see. There's a good chance someone has seen the same before and has a solution. If that did not help resolve it, please post a question on the meetup events page. <b>Please try to get these resolved and have everything already setup before the session.</b>
 
