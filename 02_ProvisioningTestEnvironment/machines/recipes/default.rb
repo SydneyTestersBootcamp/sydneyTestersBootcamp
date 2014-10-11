@@ -7,13 +7,13 @@
 # All rights reserved - Do Not Redistribute
 #
 
-apt_package "git" do
-  action :install
-end
+# apt_package "git" do
+#   action :install
+# end
 
-apt_package "subversion" do
-  action :install
-end
+# apt_package "subversion" do
+#   action :install
+# end
 
 # execute "install-rvm-and-ruby" do
 #   command <<-EOH
@@ -23,4 +23,18 @@ end
 #     gem install bundler
 #   EOH
 #   action :run
+# end
+
+# user 'sydneytester' do
+#    home '/home/sydneytester'
+#    shell '/bin/bash'
+#    password '$1$hdt9AgF0$nJNdBgzkfHZKNlyhPa2Bd/'
+# end
+
+
+# directory '/vagrant_data/quickquote' do
+#    owner 'sydneytester'
+#    group 'sydneytester'
+#    mode '0644'
+#    action :create
 # end
