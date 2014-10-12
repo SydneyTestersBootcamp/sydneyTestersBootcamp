@@ -64,7 +64,7 @@ This should create a folder 'sydneyTestersBootcamp' in your machine. This folder
 
 This cloning could take a while. Once done, go into the session folder in your Command Prompt/Terminal<br> `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
 
-#####5. Clone the forked repository into your local machine (This step is only for those of you who already have forked/cloned in previous sessions).
+#####5. Update the forked repository into your local machine (This step is only for those of you who already have forked/cloned in previous sessions).
 
 On your machine, open the command prompt or Terminal, go to the folder where you had cloned the repo into (eg: `cd sydneyTestersBootcamp`).<br>
 
@@ -94,9 +94,9 @@ The first time you run this command, it downloads a Vritualbox VM ~500 MB in siz
 
 You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds".
 
-Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.
+Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6.xxx.
 
-Now run the command `vagrant suspend` to suspend the VM.
+Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
 #####7. Set up the CI Agent VM that we'll use for the workshop
 
