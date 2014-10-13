@@ -45,6 +45,7 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 sudo gem install bundler
 vagrant plugin install vagrant-berkshelf
 vagrant plugin install vagrant-omnibus
+vagrant plugin install vagrant-cachier
 ```
 
 ######Checkout project from GitHub
