@@ -65,6 +65,12 @@ vagrant up
 ```sh
 vagrant ssh
 ```
+For Windows, you will need an SSH client: http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip<br>
+Port: 22<br>
+Host: 33.33.33.10 (the ip address in your Vagrantfile)<br>
+Username: vagrant<br>
+Password: vagrant<br>
+
 ####Most used commands
 - vagrant up: bring up and provision the machine
 - vagrant destroy: anything goes wrong, destroy the machine and rebuild it with vagrant up
