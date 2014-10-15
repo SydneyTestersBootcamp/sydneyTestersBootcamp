@@ -37,8 +37,8 @@ Read chapters 1-4. This covers some fundamentals, the need for performance testi
 ####Pre-requisites
 
 1. Install Java (version 6 or above, 7 preferable). Test this by running "java -version" on command line.
-2. Download and unzip jmeter 2.11 (http://jmeter.apache.org/)
-3. Download the jmeter plugins (http://jmeter-plugins.org/) (Standard Set & Extras Set)
+2. Download and unzip <a href="http://jmeter.apache.org/" target="_blank">jmeter 2.11</a>
+3. Download the <href="http://jmeter-plugins.org/" target="_blank">jmeter plugins</a> (Standard Set & Extras Set)
 4. Install Firefox browser
 5. Install Firefox plugin: FoxyProxy Basic
 6. Install Firefox plugin: Firebug
