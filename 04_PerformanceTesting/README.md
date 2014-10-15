@@ -25,7 +25,7 @@ OR
 
 ####Reading Material
 
-######1. A short introductory [book on Performance Testing](http://www.myndit.com.au/documents/336Testing4Dummies.pdf) by Scott Barber
+######1. A short introductory [book on Performance Testing](http://www.myndit.com.au/documents/336Testing4Dummies.pdf _blank) by Scott Barber
 
 ######2. [Microsoft Performance Testing Guidance for Web Applications](http://msdn.microsoft.com/en-us/library/bb924375.aspx)
 
