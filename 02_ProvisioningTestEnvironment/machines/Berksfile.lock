@@ -1,7 +1,9 @@
 DEPENDENCIES
+  java
   machines
     path: .
     metadata: true
 
 GRAPH
+  java (1.28.0)
   machines (0.1.0)

@@ -2,15 +2,15 @@
 
 The aim of this session is to help Tester to quickly set up Test / Dev environment on their own machine and share the configuration among team members.
 
-####Contents:
+####Agenda:
 
 - Common Tasks on setting up new Dev/Test Environment (without Chef/Vagrant)
-- Most common used Vagrant commands
-- Installing pre-require packages
-- Iteration 1: Installing base packages for the Guest VM
-- Iteration 2: Installing DB and creating seed data
-- Iteration 3: Loading latest code
-- Iteration 4: Handling the configuration to other members
+- Iteration 0: Prepare tools and ingredients
+- Iteration 1: First taste of Vagrant - Chef using default setting
+- Iteration 2: Adding some sugar - using available recipes
+- Iteration 3: Little bit of chilli - creating your first recipe
+- Iteration 4: Last check before committing
+- Iteration 5: Integrating the provision to project
 
 ####Installation Instruction
 ######Prerequisite packages:
@@ -28,7 +28,9 @@ Then go to the DevKit folder to run devkitvars.bat
 ######Important time saving note
 Since creating first virtual machine would trigger downloading of hundred of megabytes, please run below command prior coming to the session
 ```sh
+cd sydneyTestersBootcamp/02_ProvisioningTestEnvironment/machines (if you're not in the machines folder)
 vagrant box add chef/ubuntu-14.04
+bundle install
 ```
 and select option 1 (Virtual Box), this would trigger downloading the base virtual box for ubuntu 14.04 x64
 
@@ -43,6 +45,7 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 sudo gem install bundler
 vagrant plugin install vagrant-berkshelf
 vagrant plugin install vagrant-omnibus
+vagrant plugin install vagrant-cachier
 ```
 
 ######Checkout project from GitHub
@@ -62,6 +65,12 @@ vagrant up
 ```sh
 vagrant ssh
 ```
+For Windows, you will need an SSH client: http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip<br>
+Port: 22<br>
+Host: 33.33.33.10 (the ip address in your Vagrantfile)<br>
+Username: vagrant<br>
+Password: vagrant<br>
+
 ####Most used commands
 - vagrant up: bring up and provision the machine
 - vagrant destroy: anything goes wrong, destroy the machine and rebuild it with vagrant up

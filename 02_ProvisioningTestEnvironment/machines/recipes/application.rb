@@ -25,19 +25,19 @@
 # execute "install-jdk7" do
 #   command <<-EOH
 #     apt-get install software-properties-common python-software-properties
-#     add-apt-repository ppa:webupd8team/java
+#     add-apt-repository -y ppa:webupd8team/java
 #     apt-get update
-#     apt-get install oracle-java7-installer
+#     apt-get -y install oracle-java7-installer
 #   EOH
 #   action :run
 # end
 
 # create folder
-directory "/usr/local/java" do
-  owner "root"
-  group "root"
-  action :create
-end
+# directory "/usr/local/java" do
+#   owner "root"
+#   group "root"
+#   action :create
+# end
 
 # installing JDK 7 from local package
 # execute "install-local-jdk" do
@@ -60,22 +60,3 @@ end
 #   EOH
 #   action :run
 # end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

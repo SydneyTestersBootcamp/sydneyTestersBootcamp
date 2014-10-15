@@ -24,56 +24,83 @@ http://www.martinfowler.com/articles/continuousIntegration.html
 
 http://en.wikipedia.org/wiki/Continuous_integration
 
-######Internal reference:
-
-http://blog.howareyou.com/post/62157486858/continuous-delivery-with-docker-and-jenkins-part-i
-
 
 ####Pre-requisites
 
-#####1. Install the below software. Google them to find installers.
+#####1. Install the below software.
 
-| Tool/Software | Notes |
-| ------------- | ----- |
-| [Ruby](https://www.ruby-lang.org/en/) | version 2.1.2 preferred |
-| [Virtualbox](https://www.virtualbox.org/) | This tool runs the VMs that we'll use for the workshop |
-| [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - download and install them, start them up, shut them down etc. You'll need version 1.6.3 or later. <br><b>NOTE: Windows users, please install vagrant into a folder that does not have spaces in the name, eg 'c:\vagrant' </b> |
-| [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, run the command `which berks` (on osx or linux). The output should look like `/usr/bin/berk` which should be a link to `/opt/chefdk/bin` (You can check that by running `ls -l /usr/bin/berk`). If this is set incorrect, please tweak your PATH so that your system picks up `berk` from the right location.|
-| [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` |
-| [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop |
+Note: 
+- Unless versions are specified, install the <b>latest versions</b>. 
+- If you attended the last session (Provisioning Test Envs using vagrant/chef, you probably have all items in the below table already installed. If thats the case, you <b>do not need to reinstall</b> them.
 
-NOTE: If you attended last week's session on Provisioning Environments, you'd already have all these installed.
+If you have difficulties installing them on your machine, please Google the errors that you see. There's a good chance someone has seen the same before and has a solution. If that did not help resolve it, please post a question on the meetup events page. <b>Please try to get these resolved and have everything already setup before the session.</b>
 
-#####2. Create an account on [github.com](https://github.com/) if you dont already have one.
+| Tool/Software | Notes | How to test if this is installed fine |
+| ------------- | ----- | ------------------------------------- |
+| OSX/Linux: <br>[Ruby](https://www.ruby-lang.org/en/)<br><br>Windows: <br>[Ruby](http://rubyinstaller.org/downloads/) | Install Version 2.1.2 or 2.1.3. | Run `ruby --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version `2.1.2` or greater. |
+| [Virtualbox](https://www.virtualbox.org/) | This tool runs the Virtual Machines (VMs) that we'll use for the workshop | You should be able to see the application `VirtualBox` in your 'All Programs' (Windows) or 'Applications' (OSX). Try starting it up. <br><br>Expected outcome: The VirtualBox application should start up fine.|
+| [Vagrant](https://www.vagrantup.com/) | This tool manages the VMs - downloads and install them, install dependancies, start them up, shut them down etc. You'll need version 1.6.3 or later. <br><b>NOTE: Windows users, please install vagrant into a folder that does not have spaces in the name, eg 'C:\vagrant'. After installing, edit `C:\vagrant\embedded\config­.yml` and change `C:\vagrant-temp\staging\embedded` to `C:\vagrant\embedded` </b> | Run `vagrant --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version `1.6.3` or greater. |
+| [chefdk](https://downloads.getchef.com/chef-dk) | This installs 'berkshelf', a tool that fetches required chef cookbooks for packages that need to be installed <br> Once installed, run the command `which berks` (on osx or linux). The output should look like `/usr/bin/berk` which should be a link to `/opt/chefdk/bin` (You can check that by running `ls -l /usr/bin/berk`). If this is set incorrect, please tweak your PATH so that your system picks up `berk` from the right location.| Run `berks --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version `3.1.5` or greater. |
+| For Windows user only!<br<br>OSX & Linux users can skip this step<br><br>[DevKit](http://rubyinstaller.org/downloads) | This package is to support Ruby to build native package (for gem installation). You can find it at http://rubyinstaller.org/downloads <br><br>You should choose a folder with no spaces as the destination for the kit. i.e C:\Hashicorp\DevKit <br><br>Once installed, go to the DevKit folder in your command prompt, and run `devkitvars.bat`. | Not sure how to test this. |
+| [vagrant berkshelf plugin](http://berkshelf.com/) | Install it from the commandline by running `vagrant plugin install vagrant-berkshelf` | ~~Pray!~~ <br><br>Run `vagrant plugin list` at Command Prompt/Terminal. <br><br>Expected outcome: The list should include `vagrant-berkshelf`. |
+| [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop. Windows users, while installing Git, please choose the option "Use Git from the Windows Command Prompt". | Run `git --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version `1.9.3` or greater. |
 
-#####3. Clone the repository to your local machine
 
-If you dont already have the bootcamp code repo in your local machine, then get it by running in a command prompt or Terminal:
-`git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp --depth 1`
-This could take a while. Once done, go into the session folder in your Command Prompt/Termins `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
+#####2. Create an account on [github.com](https://github.com/) (Skip this step if you have already done this for previous sessions).
 
-If you already have it (cloned or forked) in your local machine, then do a `git pull` to fetch the latest versions.
+#####3. Fork the repository into your own github account (Skip this step if you have already done this for previous sessions).
 
-#####4. Set up the CI Server VM that we'll use for the workshop
+On your Browser, navigate to:
+[https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp](https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp)
 
-Go into the folder that has setting for the CI Server VM:
+On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> [https://github.com/your github username/sydneyTestersBootcamp](#)
+
+#####4. Clone the forked repository into your local machine (Skip this step if you have already done this for previous sessions).
+
+On your machine, open the command prompt or Terminal, and clone the repo by running:<br>
+`git clone https://github.com/<your github username>/sydneyTestersBootcamp --depth 1`
+
+This should create a folder 'sydneyTestersBootcamp' in your machine. This folder has all the files needed for the bootcamp.
+
+This cloning could take a while. Once done, go into the session folder in your Command Prompt/Terminal<br> `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
+
+#####5. Update the forked repository into your local machine (This step is only for those of you who already have forked/cloned in previous sessions).
+
+On your machine, open the command prompt or Terminal, go to the folder where you had cloned the repo into (eg: `cd sydneyTestersBootcamp`).<br>
+
+Add a remote alias pointing to the original repo that you forked from:<br>
+`git remote add original https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git`
+
+Now pull in the latest changes from the original repo:<br>
+`git fetch original`
+
+Now merge the changes in the original into your local machine:<br>
+`git merge original/master`
+
+If you see an error message that looks like "Please, commit your changes or stash them before you can merge. Aborting", then run:
+`git stash` and try the merge again.
+
+#####6. Set up the CI Server VM that we'll use for the workshop
+
+Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Server (Master):
+
 `cd CI_Server`
 
-and run:
+And run:
 
 `vagrant up`
 
 The first time you run this command, it downloads a Vritualbox VM ~500 MB in size (Centos Linux), installs a few packages onto it, and starts it up. This may take a long time (upto 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
-You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds"
+You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds".
 
-Once the above is done, open up a browser and navigate to [http://localhost:9080](http://localhost:9080). You should be able to see the Jenkins admin page.
+Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `java -version` and ensure it reports 1.6.xxx.
 
-Now run the command `vagrant suspend` to suspend the VM.
+Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
-#####5. Set up the CI Agent VM that we'll use for the workshop
+#####7. Set up the CI Agent VM that we'll use for the workshop
 
-Go into the folder that has setting for the CI Agent VM:
+Go into the folder that has the chef/vagrant configuration for the VM where we will install the CI Agent (Slave):
 
 `cd ../CI_Agent`
 
@@ -88,5 +115,6 @@ Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `j
 Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
 ####Common issues
+
 - RuntimeError: Couldn't determine Berks version<br>
 You would need to add /opt/chefdk/bin at the front of your PATH

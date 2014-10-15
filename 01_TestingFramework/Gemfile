@@ -25,6 +25,10 @@ gem "sinatra-activerecord"
 gem 'data_mapper'
 gem "warden"
 
+gem "cucumber"
+gem "capybara"
+gem "selenium-webdriver"
+
 group :development, :test do
  gem "shotgun"
  gem 'sqlite3'
