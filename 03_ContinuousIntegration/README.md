@@ -63,21 +63,18 @@ This should create a folder 'sydneyTestersBootcamp' in your machine. This folder
 
 This cloning could take a while. Once done, go into the session folder in your Command Prompt/Terminal<br> `cd sydneyTestersBootcamp/03_ContinuousIntegration`.
 
-#####5. Update the forked repository into your local machine (This step is only for those of you who already have forked/cloned in previous sessions).
+#####5. Update the forked repository into your local machine (This step is only for those of you who already have forked/cloned in previous sessions. If you just did step 5, then you do not need to do this).
 
 On your machine, open the command prompt or Terminal, go to the folder where you had cloned the repo into (eg: `cd sydneyTestersBootcamp`).<br>
 
-Add a remote alias pointing to the original repo that you forked from:<br>
-`git remote add original https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git`
+Add a remote alias 'upstream' pointing to the original repo that you forked from:<br>
+`git remote add upstream https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git`
 
 Now pull in the latest changes from the original repo:<br>
-`git fetch original`
-
-Now merge the changes in the original into your local machine:<br>
-`git merge original/master`
+`git pull -s recursive -X theirs upstream master`
 
 If you see an error message that looks like "Please, commit your changes or stash them before you can merge. Aborting", then run:
-`git stash` and try the merge again.
+`git stash` and try the git pull again.
 
 #####6. Set up the CI Server VM that we'll use for the workshop
 
@@ -89,7 +86,7 @@ And run:
 
 `vagrant up`
 
-The first time you run this command, it downloads a Vritualbox VM ~500 MB in size (Centos Linux), installs a few packages onto it, and starts it up. This may take a long time (upto 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
+The first time you run this command, it downloads a Vritualbox VM ~500 MB in size (Centos Linux box, NOT the same as what we used in the Provisioning Test Envs session), installs a few packages onto it, and starts it up. This may take a long time (upto 60 mins, depending on your internet connection speed), so <b>please do this before coming for the session</b>. You may want to do this on a wifi connection due to the large data download.
 
 You will see a flurry of debug messages on your terminal. Ignore any warnings that look like this: "warning: class variable access from toplevel". At the end, you'll see a message "INFO: Chef Run complete in xxx seconds".
 
