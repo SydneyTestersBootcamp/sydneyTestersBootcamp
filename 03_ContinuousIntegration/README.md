@@ -16,9 +16,7 @@ Contents:
 
 ####Reading Material
 
-######Martin Fowler's article on Continous Integration:
-
-http://www.martinfowler.com/articles/continuousIntegration.html
+######Martin Fowler's article on <a href="http://www.martinfowler.com/articles/continuousIntegration.html" target="_blank">Continous Integration</a>
 
 ######Wikipedia:
 
