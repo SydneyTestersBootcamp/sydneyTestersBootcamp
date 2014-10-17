@@ -106,6 +106,13 @@ Once the above is done, run `vagrant ssh` to ssh into the VM. Run the command `j
 
 Now run the command `exit` to exit out of the ssh session. Once back in your local machine command prompt, run `vagrant suspend` to suspend the VM.
 
+#####8. Set up an account for yourself at Heroku.com
+
+As part of this workshop, we'll demo how to deploy an application to Heroku (Heroku is a free app-hosting platform).
+
+Please create yourself a free account on [Heroku](https://www.heroku.com/) and activate it.
+
+
 ####Common issues
 
 - RuntimeError: Couldn't determine Berks version<br>
