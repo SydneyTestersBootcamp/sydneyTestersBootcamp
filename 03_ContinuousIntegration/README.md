@@ -18,9 +18,7 @@ Contents:
 
 ######Martin Fowler's article on <a href="http://www.martinfowler.com/articles/continuousIntegration.html" target="_blank">Continous Integration</a>
 
-######Wikipedia:
-
-http://en.wikipedia.org/wiki/Continuous_integration
+######Wikipedia: <a href="http://en.wikipedia.org/wiki/Continuous_integration" target="_blank">Continous Integration</a>
 
 
 ####Pre-requisites
@@ -43,12 +41,12 @@ If you have difficulties installing them on your machine, please Google the erro
 | [Git](http://git-scm.com/) | This is the source control tool that we'll use for the workshop. Windows users, while installing Git, please choose the option "Use Git from the Windows Command Prompt". | Run `git --version` at Command Prompt/Terminal. <br><br>Expected outcome: Should report a version `1.9.3` or greater. |
 
 
-#####2. Create an account on [github.com](https://github.com/) (Skip this step if you have already done this for previous sessions).
+#####2. Create an account on <a href="https://github.com/" target="_blank">Github</a> (Skip this step if you have already done this for previous sessions).
 
 #####3. Fork the repository into your own github account (Skip this step if you have already done this for previous sessions).
 
 On your Browser, navigate to:
-[https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp](https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp)
+<a href="https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp" target="_blank">https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp</a>
 
 On the top right corner of the page, there is a button called "Fork". Click that. This will fork this repo into your own account. <br>So you'd now have something like:<br> [https://github.com/your github username/sydneyTestersBootcamp](#)
 
