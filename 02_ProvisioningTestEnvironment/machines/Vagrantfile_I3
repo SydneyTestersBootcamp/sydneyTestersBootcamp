@@ -6,6 +6,10 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.require_version ">= 1.6.3"
 
+$script = <<SCRIPT
+  sudo apt-get -y install curl
+SCRIPT
+
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
@@ -20,6 +24,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # If this value is a shorthand to a box in Vagrant Cloud then 
   # config.vm.box_url doesn't need to be specified.
   config.vm.box = "chef/ubuntu-14.04"
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+    config.cache.synced_folder_opts = {
+      type: :nfs,
+      mount_options: ['rw', 'vers=3', 'tcp', 'nolock']
+    }
+  end
   
   # config.vm.box_url = "https://s3-us-west-2.amazonaws.com/misheska/vagrant/virtualbox4.3.6/centos65.box"
 
@@ -44,19 +56,25 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  # config.vm.synced_folder '~/shared', '/vagrant_data'
+  if (RUBY_PLATFORM =~ /linux/) or (RUBY_PLATFORM =~ /darwin/) then
+    Dir::mkdir(ENV['HOME'] + '/shared') unless Dir::exist?(ENV['HOME'] + '/shared')
+    config.vm.synced_folder '~/shared', '/vagrant_data'
+  elsif (RUBY_PLATFORM =~ /win/)
+    Dir::mkdir('C:\\shared') unless Dir::exist?('C:\\shared')
+    config.vm.synced_folder 'C:\\shared', '/vagrant_data'
+  end
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider :virtualbox do |vb|
+  config.vm.provider :virtualbox do |vb|
   #  Don't boot with headless mode
   #  vb.gui = true
   #
   #  Use VBoxManage to customize the VM. For example to change memory:
-  #  vb.customize ["modifyvm", :id, "--memory", "1024"]
-  # end
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+  end
   
   #
   # View the documentation for the provider you're using for more
@@ -76,4 +94,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # An array of symbols representing groups of cookbook described in the Vagrantfile
   # to skip installing and copying to Vagrant's shelf.
   # config.berkshelf.except = []
+
+  config.vm.provision "shell", inline: $script
+  
+  config.vm.provision :chef_solo do |chef|
+    chef.json = {
+      'java' => { 
+        "install_flavor" => "oracle", 
+        "jdk_version" => "7", 
+        "oracle" => { 
+          "accept_oracle_download_terms" => true 
+        }
+      }
+    }
+
+    chef.run_list = [
+        'recipe[machines::default]',
+        'recipe[machines::application]',
+        'recipe[java]',
+        'recipe[git]'
+    ]
+    chef.log_level = :debug
+  end
 end
