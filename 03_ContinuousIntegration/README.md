@@ -9,8 +9,6 @@ Contents:
 - Setting up a CI server (Jenkins)
 - Installing plugins
 - Configuring the CI Server to monitor a code repo and run tests automatically on every checkin.
-- Setting up a Distributed CI environment
-- What is Continuous Delivery (CD) and why is it needed?
 - Demo using a build pipeline to deploy to a Test Environment (to Heroku?).
 
 
