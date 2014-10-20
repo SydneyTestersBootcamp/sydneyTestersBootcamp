@@ -1,13 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require 'berkshelf/vagrant'
-
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "mobileoverlord/centos-6.5"
+  config.omnibus.chef_version = "11.6"
   config.vm.hostname = "ciserver"
   config.vm.network "private_network", type: "dhcp"
   config.vm.network "forwarded_port", guest: 8080, host: 9080
@@ -22,6 +21,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "chef_solo" do |chef|
     
+    chef_gem_path    = "/opt/chef/embedded/lib/ruby/gems/1.9.1"
+    chef.binary_env  = "GEM_PATH=#{chef_gem_path} GEM_HOME=#{chef_gem_path}"
+    chef.binary_path = "/opt/chef/bin"
+        
     chef.json = {
       'rvm' => {
          'rubies' => ["2.1.2"],
@@ -42,4 +45,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.log_level = :debug
     
   end
+  
 end
