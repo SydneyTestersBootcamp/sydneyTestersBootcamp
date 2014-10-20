@@ -4,3 +4,5 @@
 */cookbooks/*
 */.kitchen/*
 03_ContinuousIntegration/CI_Agent/.kitchen/*
+03_ContinuousIntegration/CI_Agent/slave.jar
+03_ContinuousIntegration/CI_Agent/workspace

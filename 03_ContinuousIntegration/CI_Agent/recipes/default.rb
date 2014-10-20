@@ -11,6 +11,14 @@ user "jenkins" do
   password "jenkins"
 end
 
+#file "/var/lib/jenkins/.bash_profile" do
+#  owner 'jenkins'
+#  group 'jenkins'
+#  mode '0644'
+#  content IO.read("/Installers/bash_profile.txt")
+#  action :create
+#end
+
 #execute "CreateJenkinsJob" do
 #  command "rpm -ivh /Installers/jenkins-1.582-1.1.noarch.rpm"
 #  action :run
