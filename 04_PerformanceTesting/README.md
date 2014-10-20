@@ -42,3 +42,6 @@ Read chapters 1-4. This covers some fundamentals, the need for performance testi
 4. Install Firefox browser
 5. Install Firefox plugin: FoxyProxy Basic
 6. Install Firefox plugin: Firebug
+
+Note: 
+For MAC users: If you updated your OS to Yosemite, make sure you download the latest <a href="http://support.apple.com/kb/DL1572?viewlocale=en_US&locale=en_US" target="_blank">Java version</a>
