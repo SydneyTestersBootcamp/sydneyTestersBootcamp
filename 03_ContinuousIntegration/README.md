@@ -111,7 +111,7 @@ Now run the command `exit` to exit out of the ssh session. Once back in your loc
 
 As part of this workshop, we'll demo how to deploy an application to Heroku (Heroku is a free app-hosting platform).
 
-Please create yourself a free account on [Heroku](https://www.heroku.com/) and activate it.
+Please create yourself a free account on <a href="https://www.heroku.com/" target="_blank">Heroku</a> and activate it.
 
 
 ####Common issues
