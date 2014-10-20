@@ -20,6 +20,8 @@ Contents:
 
 ######Wikipedia: <a href="http://en.wikipedia.org/wiki/Continuous_integration" target="_blank">Continous Integration</a>
 
+######Documentation on <a href="https://wiki.jenkins-ci.org/display/JENKINS/Step+by+step+guide+to+set+up+master+and+slave+machines" target="_blank">setting up Slaves and Masters</a>
+
 
 ####Pre-requisites
 
