@@ -1,3 +1,54 @@
-magic_shell_environment 'PATH' do
-  value '$PATH:/usr/local/rvm/gems/ruby-2.1.2/bin:/usr/local/rvm/gems/ruby-2.1.2@global/bin:/usr/local/rvm/rubies/ruby-2.1.2/bin:/usr/local/rvm/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/sbin:/usr/sbin:/sbin:/home/vagrant/bin:/home/vagrant/bin'
+group "jenkins" do
+  action :create
 end
+
+user "jenkins" do
+  comment "Jenkins"
+  uid 5000
+  gid "jenkins"
+  home "/var/lib/jenkins"
+  shell "/bin/bash"
+  password "jenkins"
+end
+
+#file "/var/lib/jenkins/.bash_profile" do
+#  owner 'jenkins'
+#  group 'jenkins'
+#  mode '0644'
+#  content IO.read("/Installers/bash_profile.txt")
+#  action :create
+#end
+
+#execute "CreateJenkinsJob" do
+#  command "rpm -ivh /Installers/jenkins-1.582-1.1.noarch.rpm"
+#  action :run
+#end
+
+#execute "CreateJenkinsJob" do
+#  command "service jenkins start"
+#  action :run
+#end
+
+#execute "Sleep" do
+#  command "sleep 30"
+#  action :run
+#end
+
+#execute "CurlToJenkins" do
+#  command "curl http://localhost:8080 --verbose"
+#  action :run
+#end
+
+#execute "CreateJenkinsJob" do
+#  command "curl -X POST -d @/Installers/config.xml -H \"Content-Type: application/xml\" http://localhost:8080/createItem?name=QuickQuote -v"
+#  action :run
+#end
+
+#execute "UpdatePluginList" do
+#  command "curl -L http://updates.jenkins-ci.org/update-center.json | sed '1d;$d' | curl -X POST -H 'Accept: application/json' -d @- http://localhost:8080/updateCenter/byId/default/postBack --verbose"
+#end
+
+#execute "InstallGitPluginForJenkins" do
+#  command "java -jar /Installers/jenkins-cli.jar -s http://localhost:8080 install-plugin git -restart"
+#  action :run
+#end
