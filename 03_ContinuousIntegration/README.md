@@ -120,9 +120,21 @@ Please create yourself a free account on <a href="https://www.heroku.com/" targe
 You would need to add /opt/chefdk/bin at the front of your PATH
 
 
-####Path to setup (We will do this during the session, in jenkins. Do not do this beforehand.)
+####Some Data that we will use during the session (Ignore this for now, this is just used during the session):
 
-export PATH=/usr/local/rvm/gems/ruby-2.1.2/bin:/usr/local/rvm/gems/ruby-2.1.2@global/bin:/usr/local/rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/rvm/bin:/home/vagrant/bin; 
+######SCM Repo:
+https://github.com/SydneyTestersBootcamp/QuickQuoteCi.git
+
+######Build steps for tests:
+export PATH=/usr/local/rvm/gems/ruby-2.1.2/bin:/usr/local/rvm/gems/ruby-2.1.2@global/bin:/usr/local/rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/rvm/bin:/home/vagrant/bin;
+
+bundle install --path ./;
+
+bundle exec rake;
+
+
+######Build steps for deployment:
+export PATH=/usr/local/rvm/gems/ruby-2.1.2/bin:/usr/local/rvm/gems/ruby-2.1.2@global/bin:/usr/local/rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/rvm/bin:/home/vagrant/bin;
 
 export APP_NAME=whatever_your_app_name_is;
 
