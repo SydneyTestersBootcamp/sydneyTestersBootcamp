@@ -28,11 +28,11 @@ It will be hands on as well so instead of just understanding the theory you will
 
 1. Install Sublime text Editor
 
-2. Install the Sublime packages  - 
+2. Install the Sublime packages - <br>
 			Ruby Debugger, Rspec and Cucumber: 
 				Install through Apple/shift P shortcut or through Sublime Text menu. 
-				Search for Package Control: Install Package and then add the package (Rspec etc) from there.
-			Note: You may not have the package control (and therefore not able to install any packages), if that is the case <a href="https://sublime.wbond.net/installation" target="_blank">this page</a> tells you how to install that.
+				Search for Package Control: Install Package and then add the package (Rspec etc) from there.<br>
+			Note: You may not have the package control (and therefore not able to install any packages), if that is the case <a href="https://sublime.wbond.net/installation" target="_blank">this page</a> tells you how to install that.<br>
 
 
 3. Setup a Github account and send us your account name
