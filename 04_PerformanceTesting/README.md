@@ -1,6 +1,8 @@
 ####Session 4: Performance Testing with JMeter
 
-This session will help you get started with JMeter (an opensource tool) for performance testing.
+This session will help you get started with JMeter (an opensource tool) for performance testing. 
+
+This is a fairly wide topic and there is a lot to cover so we will work our way through until time runs out. If there is still enough interest and more things to cover we will schedule another session on Performance Testing sometime early next year. 
 
 Some things we'll cover are:
 - Basic components/elements of Jmeter
@@ -12,7 +14,7 @@ Some things we'll cover are:
 - Monitoring and analysing results
 - etc
 
-NOTE: This is more of a "Get started with Jmeter for performance testing" than a "Basics of Performnce Testing". During the session, we will spend more time fiddling hands-on with Jmeter rather than talking about the basics of performance testing (which IMO is covered by the suggested reading material).
+NOTE: This is more of a "Get started with Jmeter for performance testing" than a "Basics of Performance Testing". During the session, we will spend more time fiddling hands-on with Jmeter rather than talking about the basics of performance testing (which IMO is covered by the suggested reading material).
 
 ####Who will benefit from this session:
 
@@ -42,3 +44,6 @@ Read chapters 1-4. This covers some fundamentals, the need for performance testi
 4. Install Firefox browser
 5. Install Firefox plugin: FoxyProxy Basic
 6. Install Firefox plugin: Firebug
+
+Note: 
+For MAC users: If you updated your OS to Yosemite, make sure you download the latest <a href="http://support.apple.com/kb/DL1572?viewlocale=en_US&locale=en_US" target="_blank">Java version</a>

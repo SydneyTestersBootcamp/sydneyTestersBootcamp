@@ -13,11 +13,8 @@ Each session has a folder in here. In the folder, you'd find more information ab
 
 ####Session 4: [Performance Testing using Jmeter](04_PerformanceTesting/)
 
-####Session 5: Security/Penetration Testing
+####Session 5: TBD
 Coming soon ...
 
-####Session 6: TBD
-Coming soon ...
-
-####Session 7: TBD
+####Session 6: Security/Penetration Testing
 Coming soon ...
