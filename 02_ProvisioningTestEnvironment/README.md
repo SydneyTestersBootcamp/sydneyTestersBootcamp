@@ -18,8 +18,8 @@ The aim of this session is to help Tester to quickly set up Test / Dev environme
 Choose Vagrant for your prefer OS.
 - <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Install Virtualbox</a><br>
 - <a href="http://downloads.getchef.com/chef-dk/" target="_blank">Install ChefDK</a><br>
-- Install DevKit (Windows user only)<br>
-This package is to support Ruby to build native package (for gem installation). You can find it at http://rubyinstaller.org/downloads<br>
+- <a href="http://rubyinstaller.org/downloads" targe="_blank">Install DevKit (Windows user only)</a><br>
+This package is to support Ruby to build native package (for gem installation).<br>
 You should choose a non-space in full path as the destination for the kit. i.e C:\Hashicorp\DevKit<br>
 Then go to the DevKit folder to run devkitvars.bat
 
@@ -37,7 +37,7 @@ and select option 1 (Virtual Box), this would trigger downloading the base virtu
 ```sh
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
-- For Windows: download and install Ruby from http://rubyinstaller.org/downloads/
+- For Windows: download and install <a href="http://rubyinstaller.org/downloads/" target="_blank">Ruby</a>
 - Installing require gems and vagrant plugins:
 ```sh
 sudo gem install bundler
@@ -47,7 +47,7 @@ vagrant plugin install vagrant-cachier
 ```
 
 ######Checkout project from GitHub
-- If you don't have git, please get it from: http://git-scm.com/downloads
+- If you don't have git, you can find it <a href="http://git-scm.com/downloads" target="_blank">here</a>.
 ```sh
 git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 ```
@@ -63,7 +63,7 @@ vagrant up
 ```sh
 vagrant ssh
 ```
-For Windows, you will need an SSH client: http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip<br>
+For Windows, you will need an <a href"http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip" target="_blank">SSH client</a><br>
 Port: 22<br>
 Host: 33.33.33.10 (the ip address in your Vagrantfile)<br>
 Username: vagrant<br>
