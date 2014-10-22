@@ -14,12 +14,10 @@ The aim of this session is to help Tester to quickly set up Test / Dev environme
 
 ####Installation Instruction
 ######Prerequisite packages:
-- Install Vagrant<br>
-Choose Vagrant for your prefer OS from: https://www.vagrantup.com/downloads.html
-- Install Virtualbox<br>
-https://www.virtualbox.org/wiki/Downloads
-- Install ChefDK<br>
-http://downloads.getchef.com/chef-dk/
+- <a href="https://www.vagrantup.com/downloads.html" target="_blank">Install Vagrant</a><br>
+Choose Vagrant for your prefer OS.
+- <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">Install Virtualbox</a><br>
+- <a href="http://downloads.getchef.com/chef-dk/" target="_blank">Install ChefDK</a><br>
 - Install DevKit (Windows user only)<br>
 This package is to support Ruby to build native package (for gem installation). You can find it at http://rubyinstaller.org/downloads<br>
 You should choose a non-space in full path as the destination for the kit. i.e C:\Hashicorp\DevKit<br>
