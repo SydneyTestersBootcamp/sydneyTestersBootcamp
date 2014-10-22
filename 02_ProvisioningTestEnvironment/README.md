@@ -90,13 +90,12 @@ i.e: VAGRANT_HOME=C:\HashiCorp\.vagrant.d
 
 ####Reading Material
 - Mischa Taylor's Coding Blog:<br>
-http://misheska.com/blog/2013/06/16/getting-started-writing-chef-cookbooks-the-berkshelf-way/ <br>
-http://misheska.com/blog/2013/06/23/getting-started-writing-chef-cookbooks-the-berkshelf-way-part2/ <br>
-http://misheska.com/blog/2013/08/06/getting-started-writing-chef-cookbooks-the-berkshelf-way-part3/ <br>
+<a href="http://misheska.com/blog/2013/06/16/getting-started-writing-chef-cookbooks-the-berkshelf-way/" target="_blank">Getting started writing chef cookbooks the berkshelf way</a><br>
+<a href="http://misheska.com/blog/2013/06/23/getting-started-writing-chef-cookbooks-the-berkshelf-way-part2/" target="_blank">Getting started writing chef cookbooks the berkshelf way. Part 2</a><br>
+<a href="http://misheska.com/blog/2013/08/06/getting-started-writing-chef-cookbooks-the-berkshelf-way-part3/" target="_blank">Getting started writing chef cookbooks the berkshelf way. Part 3</a><br>
 <br>
 
-- Chef Online Documents:<br>
-https://docs.getchef.com/essentials_cookbooks.html
+- <a href="https://docs.getchef.com/essentials_cookbooks.html" target="_blank">Chef Online Documents</a><br>
 
-- Vagrant Online Documents:<br>
-http://docs.vagrantup.com/v2/
+- <a href="http://docs.vagrantup.com/v2/" target="_blank">Vagrant Online Documents</a><br>
+
