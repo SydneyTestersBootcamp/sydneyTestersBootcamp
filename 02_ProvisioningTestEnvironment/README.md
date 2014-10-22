@@ -63,7 +63,7 @@ vagrant up
 ```sh
 vagrant ssh
 ```
-For Windows, you will need an <a href"http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip" target="_blank">SSH client</a><br>
+For Windows, you will need an <a href="http://the.earth.li/~sgtatham/putty/latest/x86/putty.zip" target="_blank">SSH client</a><br>
 Port: 22<br>
 Host: 33.33.33.10 (the ip address in your Vagrantfile)<br>
 Username: vagrant<br>
