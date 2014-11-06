@@ -85,7 +85,19 @@ Step 2.
 5. Click Ok
 
 Step 3.
-Start vm and login with username: root and password:owaspbwa
+Start vm and login with username: root and password: owaspbwa
+
+Step 4.
+Type vi /etc/network/interfaces
+
+Step 5.
+Append following
+auto eth1
+iface eth1 inet static
+    address 10.10.10.10
+    netmask 255.255.255.0
+    
+    
 
 ####Common issues
 
