@@ -97,6 +97,14 @@ iface eth1 inet static
     address 10.10.10.10
     netmask 255.255.255.0
     
+___________________________
+
+Download Burp Suite from http://portswigger.net/burp/downloadfree.html
+
+___________________________
+
+
+    
     
 
 ####Common issues
