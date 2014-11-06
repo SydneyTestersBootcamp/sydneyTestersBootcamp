@@ -101,6 +101,8 @@ ___________________________
 
 Download Burp Suite from http://portswigger.net/burp/downloadfree.html
 
+Downlaod dbvisualizer from http://www.dbvis.com/download/
+
 ___________________________
 
 
