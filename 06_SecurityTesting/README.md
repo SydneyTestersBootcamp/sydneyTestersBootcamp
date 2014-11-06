@@ -68,6 +68,15 @@ For Windows, you will need an <a href="http://the.earth.li/~sgtatham/putty/lates
 Port: 22<br>
 Host: 33.33.33.10 (the ip address in your Vagrantfile)<br>
 
+Step 1.
+For Virtual Box users
+1. Visit Virtual Box -> Preferences -> Network -> On Host-only Networks -> Click +
+2. You will see vboxnet0 added to your Host network
+3. Double Click on it and on Adapter tab assign ip 10.10.10.1 and network mask as 255.255.255.0
+4. Now within the same window on DHCP Server tab -> uncheck "Enable Server"
+5. Click Ok
+
+
 ####Common issues
 
 ####Reading Material
