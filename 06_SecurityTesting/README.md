@@ -68,6 +68,7 @@ For Windows, you will need an <a href="http://the.earth.li/~sgtatham/putty/lates
 Port: 22<br>
 Host: 33.33.33.10 (the ip address in your Vagrantfile)<br>
 
+NOTE: vm should not be running
 Step 1.
 For Virtual Box users
 1. Visit Virtual Box -> Preferences -> Network -> On Host-only Networks -> Click +
@@ -76,6 +77,15 @@ For Virtual Box users
 4. Now within the same window on DHCP Server tab -> uncheck "Enable Server"
 5. Click Ok
 
+Step 2.
+1. Right click on vm and click on Settings-> Network tab
+2. Click on Adapter 2
+3. Check "Enable network adapter"
+4. From the dropdown select "Host only Adapter" which you created before, i.e. vboxnet0  
+5. Click Ok
+
+Step 3.
+Start vm and login with username: root and password:owaspbwa
 
 ####Common issues
 
