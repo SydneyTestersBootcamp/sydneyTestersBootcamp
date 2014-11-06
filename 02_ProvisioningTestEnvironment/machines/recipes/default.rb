@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
+# include_recipe 'apache2'
 # apt_package "git" do
 #   action :install
 # end
