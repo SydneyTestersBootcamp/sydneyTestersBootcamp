@@ -107,19 +107,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           "accept_oracle_download_terms" => true 
         }
       }
-      # 'apache2' => {
-      #   "listen_ports" => ["80", "443"]
-      # }
     }
 
     chef.run_list = [
         'recipe[machines::default]',
         'recipe[machines::application]',
         'recipe[java]',
-        'recipe[php]',
         'recipe[apache2]',
         'recipe[apache2::mod_ssl]',
         'recipe[apache2::mod_php5]',
+        'recipe[php]',
         'recipe[machines::webserver]'
     ]
     chef.log_level = :debug
