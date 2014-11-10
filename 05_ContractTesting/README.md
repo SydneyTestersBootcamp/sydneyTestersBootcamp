@@ -64,6 +64,7 @@ If you see an error message that looks like "Please, commit your changes or stas
 `git stash` and try the git pull again.
 
 #####6. Update your ruby gems
-`cd sydneyTestersBootcamp/05_ContractTesting`
-`bundle install`
+`cd sydneyTestersBootcamp/05_ContractTesting`<br>
+`bundle install`<br>
+If you have ruby version 2.1.2 (I  have 2.1.3) you will need to edit your Gemfile and replace `ruby '2.1.3'` with `ruby '2.1.2'` and run bundle install again.
 
