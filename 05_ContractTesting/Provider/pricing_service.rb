@@ -1,10 +1,6 @@
 require 'sinatra'
 require 'json'
 
-get '/' do
-	'Pricing Service'
-end
-
 class CarPremiumCalculator
 
   def initialize
@@ -21,16 +17,24 @@ class CarPremiumCalculator
   
 end
 
-get '/price' do
-	age = params[:age].to_f
-	gender = params[:gender]
-	state = params[:state]
-	make = params[:make]
-	calc = CarPremiumCalculator.new
-	
-	value = calc.getPremiumForQuote(age, gender, state, make)
+class App < Sinatra::Base
+	get '/' do
+		'Pricing Service'
+	end
 
-	{
-		price: value.to_f
-	}.to_json
+	get '/price' do
+		age = params[:age].to_f
+		gender = params[:gender]
+		state = params[:state]
+		make = params[:make]
+		calc = CarPremiumCalculator.new
+		
+		value = calc.getPremiumForQuote(age, gender, state, make)
+
+		headers 'Content-Type' => 'application/json'
+		
+		{
+			price: value.to_f
+		}.to_json
+	end
 end

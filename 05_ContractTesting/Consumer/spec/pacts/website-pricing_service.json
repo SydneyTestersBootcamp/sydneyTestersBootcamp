@@ -1,0 +1,31 @@
+{
+  "provider": {
+    "name": "Pricing Service"
+  },
+  "consumer": {
+    "name": "Website"
+  },
+  "interactions": [
+    {
+      "description": "a valid request for a price",
+      "provider_state": "normal",
+      "request": {
+        "method": "get",
+        "path": "/price",
+        "query": "age=30&gender=female&make=audi&state=nsw"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "price": 55.54
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "1.0.0"
+  }
+}
