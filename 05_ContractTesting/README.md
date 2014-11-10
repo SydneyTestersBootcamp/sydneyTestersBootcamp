@@ -24,10 +24,7 @@ Contents:
 #####1. Install the below software.
 
 Note: 
-- If you attended the last session (Provisioning Test Envs using vagrant/chef), you probably have all items in the below table already installed. If thats the case, you <b>do not need to reinstall</b> them. However, please confirm that they are set up correctly by the method provided in the 3rd column. Also please ensure you do steps 5, 6 & 7.
-
-If you have difficulties installing them on your machine, please Google the errors that you see. There's a good chance someone has seen the same before and has a solution. If that did not help resolve it, please post a question on the meetup events page. <b>Please try to get these resolved and have everything already setup before the session.</b>
-
+- Some of you will already have the below software from previous sessions. Double check and then jump to step 5.
 
 | Tool/Software | Notes | How to test if this is installed fine |
 | ------------- | ----- | ------------------------------------- |
@@ -65,3 +62,8 @@ Now pull in the latest changes from the original repo:<br>
 
 If you see an error message that looks like "Please, commit your changes or stash them before you can merge. Aborting", then run:
 `git stash` and try the git pull again.
+
+#####6. Update your ruby gems
+`cd sydneyTestersBootcamp/05_ContractTesting`
+`bundle install`
+
