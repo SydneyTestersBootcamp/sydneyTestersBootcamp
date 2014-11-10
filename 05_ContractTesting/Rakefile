@@ -1,0 +1,23 @@
+require 'rake'
+
+task default: :run_both_specs
+
+task :run_both_specs do
+	output = `cd Consumer && rspec spec/carQuote_spec.rb`
+
+	if $?.exitstatus == 0
+		puts "Consumer specs PASS"
+	else
+		puts "Consumer specs FAIL"
+		puts output
+	end
+
+	output = `cd Provider && rake pact:verify`
+
+	if $?.exitstatus == 0
+		puts "Provider specs PASS"
+	else
+		puts "Provider specs FAIL"
+		puts output
+	end
+end
