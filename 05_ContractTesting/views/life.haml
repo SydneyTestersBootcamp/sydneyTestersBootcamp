@@ -1,0 +1,55 @@
+.container
+  #quotebox{:style => "margin-top:30px;", :class => "mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"}                    
+    .panel.panel-info
+      .panel-heading
+        %h3{:class => "panel-title text-center"}Sydney Testers Life Insurance
+      .panel-body{:style => "padding-top:30px"}
+    	
+        %form{:id => "quoteform", :class => "form-horizontal", :role => "form", :action => "/quote", :method => "post", "data-bv-feedbackicons-valid" => "glyphicon glyphicon-ok", "data-bv-feedbackicons-invalid" => "glyphicon glyphicon-remove", "data-bv-feedbackicons-validating" => "glyphicon glyphicon-refresh", "data-bv-submitbuttons" => 'button[type="submit"]', "data-bv-live" => "enabled"}
+		
+          %fieldset
+		  
+          .form-group{:style => "margin-bottom: 25px"}
+            %label{:class => "col-md-4 control-label", :for => "textinput"}Age  
+            .col-md-6
+              %input{:id => "age", :name => "age", :type => "number", :placeholder => "Enter your age", :class => "form-control input-md", "data-bv-numeric" => "", "data-bv-numeric-message" => "No alphabets please", "data-bv-notempty" => "", "data-bv-notempty-message" => "The age is required", "data-bv-integer" => "", "data-bv-integer-message" => "The age has to be a number bigger than zero"}
+        
+          .form-group{:style => "margin-bottom: 25px"}
+            %label{:class => "col-md-4 control-label", :for => "radios"}Gender
+            .col-md-6 
+              %label{:class => "radio-inline", :for => "radios-0"}Male
+              %input{:type => "radio", :name => "gender", :id => "male", :value => "male", :checked => "checked"}
+              %label{:class => "radio-inline", :for => "radios-1"}Female
+              %input{:type => "radio", :name => "gender", :id => "female", :value => "female"}
+        
+          .form-group
+            %label{:class => "col-md-4 control-label", :for => "selectbasic"}Occupation Category
+            .col-md-6 
+              %select{:id => "occupation", :name => "occupation", :class => "form-control"}
+                %option{:value => "risk0"}Low Risk
+                %option{:value => "risk1"}Medium Risk
+                %option{:value => "risk2"}High Risk
+                %option{:value => "risk3"}Very High Risk
+				
+          .form-group
+            %label{:class => "col-md-4 control-label", :for => "selectbasic"}State
+            .col-md-6 
+              %select{:id => "state", :name => "state", :class => "form-control"}
+                %option{:value => "nsw"}New South Wales
+                %option{:value => "vic"}Victoria
+                %option{:value => "wa"}Western Australia
+                %option{:value => "sa"}South Australia
+                %option{:value => "tas"}Tasmania
+                %option{:value => "qld"}Queensland
+			  
+          .form-group{:style => "margin-bottom: 25px"}
+            %label{:class => "col-md-4 control-label", :for => "textinput"}Email
+            .col-md-6
+              %input{:id => "email", :name => "email", :type => "text", :placeholder => "Enter your email address", :class => "form-control input-md", "data-bv-notempty" => "", "data-bv-notempty-message" => "The email is required"}
+			  
+          %input{:type => "hidden", :name => "typeOfInsurance", :value => "life"}
+		  
+          .form-group
+            .col-md-4
+            .col-md-6
+              %button{:id => "getquote", :type => "submit", :name => "getquote", :class => "btn btn-primary btn-lg btn-block"}Get Quote

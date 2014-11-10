@@ -1,0 +1,36 @@
+.container
+  #quotebox{:style => "margin-top:30px;", :class => "mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"}                    
+    .panel.panel-info
+      .panel-heading
+        %h3{:class => "panel-title text-center"}Payment Sucessful
+      .panel-body{:style => "padding-top:30px"}
+        %form{:id => "paymentSuccessful", :class => "form-horizontal", :role => "form"}
+		
+          %fieldset
+		  
+          .form-group{:style => "margin-bottom: 10px"}
+            %dl.dl-horizontal
+              %dt Age
+              %dd== #{@quote.age}
+              %dt Email
+              %dd== #{@quote.email}
+              %dt Gender
+              %dd== #{@quote.namedGender}
+              - if @quote.type=="life"
+                %dt Occupation category
+                %dd== #{@quote.namedOccupationCategory}
+              - else
+                %dt Make
+                %dd== #{@quote.namedMake}
+                %dt Year
+                %dd== #{@quote.year}
+              %dt State
+              %dd== #{@quote.namedState}
+			  
+      .panel-footer.clearfix
+        %form{:id => "premiumResultform", :class => "form-horizontal", :role => "form"}
+		
+          %fieldset
+		  
+          .form-group
+            %dt{:class => "panel-title text-center"}== Your payment of $#{@quote.premium} is successful!!

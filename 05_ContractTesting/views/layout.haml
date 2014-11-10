@@ -1,0 +1,38 @@
+!!!
+%html
+  %head
+    %title SydneyTesters QuickQuote
+    %link(rel="stylesheet" href="css/jquery-ui.css" media="screen, projection")
+    %link(rel="stylesheet" href="css/bootstrap.min.css")
+    %link(rel="stylesheet" href="css/bootstrapValidator.min.css")
+    %script(src="js/jquery-1.8.2.min.js")
+    %script(src="js/jquery-ui.js")
+    %script(src="/javascripts/application.js")
+    %script(src="js/bootstrapValidator.min.js")
+    %script(src="js/bootstrap.min.js")
+  %body
+    .container-fluid
+      .row
+        #wrapper
+          #header
+          .container-fluid
+            .row
+              %img{:src => "images/sydneytesters.png", :style => "margin-top:30px;", :class => "mainbox col-xs-8 col-sm-8 col-md-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2"}
+      .row 
+        %ul.nav.nav-pills{:class => "col-xs-8 col-sm-8 col-md-8 col-xs-offset-8 col-sm-offset-8 col-md-offset-8"}
+          %li
+            .dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                Already an user? Login here
+                %span.caret
+              .dropdown-menu{:style => "padding: 10px;"}
+                %form{:action => "", :role => "form"}
+                  .form-group
+                    %input#user.form-control{:placeholder => "Email address", :type => "text"}
+                    %input#password.form-control{:placeholder => "Password", :type => "password"}
+                  %button.btn.btn-default{:type => "submit"} Login
+      .row 
+        #content
+        .container-fluid
+          .row
+            =yield

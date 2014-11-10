@@ -1,0 +1,19 @@
+.container
+  #quotebox{:style => "margin-top:30px;", :class => "mainbox col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3"}
+    .panel.panel-info
+      .panel-heading
+        %h3{:class => "panel-title text-center"}Insurance Policies
+      .panel-body{:style => "padding-top:30px"}
+
+        %table.table.table-hover
+          %thead
+            %tr
+              %th Policy #
+              %th Type
+              %th Details
+          %tbody
+            - @policies.each do |policy|
+              %tr
+                %td= policy.policynum
+                %td= policy.type
+                %td= policy.quote
