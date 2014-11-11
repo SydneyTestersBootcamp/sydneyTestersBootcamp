@@ -38,12 +38,20 @@ bundle install
 ```
 
 ######Checkout project from GitHub and setup the test lab
-- If you don't have git, you can find it <a href="http://git-scm.com/downloads" target="_blank">here</a>.
+
 ```sh
 git clone https://github.com/OWASP/railsgoat.git
 cd railsgoat
 bundle install
 ```
+- If you don't have git, you can find it <a href="http://git-scm.com/downloads" target="_blank">here</a>.
+- If gem installation finishes successfully (you see no error), you can start the lab as below:
+```sh
+rake db:setup (to setup a clean DB with some seed data) 
+rails server (start up server at port 3000)
+```
+- You now can access to the lab via http://localhost:3000/
+- NOTE: you should disconnect your computer from network since the Security Test Lab was purposely setup with security holes, hence would leave your PC openned for being attacked
 
 ######Important time saving note
 Since downloading and compiling gems make take long time, please run above command prior coming to the session
