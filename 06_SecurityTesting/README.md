@@ -63,8 +63,9 @@ Burp Suite (Free version): http://portswigger.net/burp/downloadfree.html<br>
 DB tool: http://www.dbvis.com/download/
 
 ####Common issues
-Sometimes gems got failure during installation, in that case try to follow the last instruction from the log that outputed to screen). If even the instruction doesn't help, then google for it. We will try to help when you are at the session, but that would cause bit rush.
+Sometimes gems got failure during installation, in that case try to follow the last instruction from the log that outputed to screen). If even the instruction doesn't help, then post it up on the Sydney Tester Bootcamp wall.
 
 ####Reading Material
 - <a href="https://www.owasp.org/index.php/Top_10_2013-Top_10" target="_blank">OWASP Top 10</a>: List of top 10 security issues
 - Quick Youtube video on <a href="https://www.youtube.com/watch?v=JmAk1OVwp-4" target="_blank">how to setup and use Burp Suite</a>
+
