@@ -42,6 +42,7 @@ bundle install
 ######Checkout project from GitHub and setup the test lab
 - We will use Railsgoat app as test lab for this session. This is a Ruby-Rails web app which was designed to demonstrate OWASP Top 10
 ```sh
+https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 git clone https://github.com/OWASP/railsgoat.git
 cd railsgoat
 bundle install
@@ -68,4 +69,5 @@ Sometimes gems got failure during installation, in that case try to follow the l
 ####Reading Material
 - <a href="https://www.owasp.org/index.php/Top_10_2013-Top_10" target="_blank">OWASP Top 10</a>: List of top 10 security issues
 - Quick Youtube video on <a href="https://www.youtube.com/watch?v=JmAk1OVwp-4" target="_blank">how to setup and use Burp Suite</a>
+
 
