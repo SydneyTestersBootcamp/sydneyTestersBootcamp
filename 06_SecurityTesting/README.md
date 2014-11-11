@@ -53,7 +53,8 @@ Burp Suite (Free version): http://portswigger.net/burp/downloadfree.html<br>
 DB tool: http://www.dbvis.com/download/
 
 ####Common issues
-If you
+Sometimes gems got failure during installation, in that case try to follow the last instruction from the log that outputed to screen). If even the instruction doesn't help, then google for it. We will try to help when you are at the session, but that would cause bit rush.
+
 ####Reading Material
 <a href="https://www.owasp.org/index.php/Top_10_2013-Top_10" target="_blank">OWASP Top 10</a>
 
