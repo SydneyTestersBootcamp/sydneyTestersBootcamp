@@ -29,8 +29,7 @@ Ruby and related Gems
 ```sh
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
-- For Windows: download and install <a href="http://rubyinstaller.org/downloads/" target="_blank">Ruby</a> then <a href="http://rubyinstaller.org/downloads" targe="_blank">Install DevKit</a><br>
-This package is to support Ruby to build native package (for gem installation).<br>
+- For Windows: download and install <a href="http://rubyinstaller.org/downloads/" target="_blank">Ruby</a> then <a href="http://rubyinstaller.org/downloads" targe="_blank">Install DevKit</a> (package is to support Ruby to build native package during gem installation).<br>
 You should choose a non-space in full path as the destination for the kit. i.e C:\DevKit<br>
 Then go to the DevKit folder to run devkitvars.bat
 ```sh
