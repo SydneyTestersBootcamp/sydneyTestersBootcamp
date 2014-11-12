@@ -34,7 +34,7 @@ JDK (version >= 1.7): you should grab it from <a href="http://www.oracle.com/tec
 ######Checkout project from GitHub and setup the test lab
 - We will use Railsgoat app as test lab for this session. This is a Ruby-Rails web app which was designed to demonstrate OWASP Top 10
 ```sh
-https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
+git clone https://github.com/SydneyTestersBootcamp/sydneyTestersBootcamp.git
 git clone https://github.com/OWASP/railsgoat.git
 cd railsgoat
 bundle install
