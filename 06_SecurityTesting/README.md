@@ -3,42 +3,34 @@
 The aim of this session is to help tester to kick start the Security Testing journey.
 
 ####Agenda:
-1. Security Testing in daily work
-	- Dedicated security tester
-	- Per task assigned
-	- QA on Security Test result
-	- ...
-	
-2. Type of Security Testing
-	- Whitebox
-	- Blackbox
-	- Graybox (we focus on this for the session)
-	
-3. Tools for using
+1. Quick brief on Security Testing
+2. Tools for using
 	- Web - browser (Chrome, Firefox, IE)
 	- Burbsuite
 	- OWASP ZAP
 	- ...
-	
-4. Hands-on Test Lab
+3. Hands-on Test Lab
 
 ####Installation Instruction
 ######Prerequisite packages:
+
 Ruby and related Gems
 - For Unix:
 ```sh
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 - For Windows: download and install <a href="http://rubyinstaller.org/downloads/" target="_blank">Ruby</a> then <a href="http://rubyinstaller.org/downloads" targe="_blank">Install DevKit</a> (package is to support Ruby to build native package during gem installation).<br>
-You should choose a non-space in full path as the destination for the kit. i.e C:\DevKit<br>
-Then go to the DevKit folder to run devkitvars.bat
-
+You should choose a non-space in full path as the destination for the kit. i.e C:\DevKit, then add *C:\DevKit\bin;C:\DevKit\mingw\bin* to your System PATH (type below command on prompt)
+```sh
+SET PATH=C:\Devkit\bin;C:\Devkit\mingw\bin;%PATH%
+```
 - After Ruby is installed, run below commands to install gems
 ```sh
 sudo gem install bundler
 bundle install
 ```
 
+JDK (version >= 1.7): you should grab it from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Oracle Website</a>
 ######Checkout project from GitHub and setup the test lab
 - We will use Railsgoat app as test lab for this session. This is a Ruby-Rails web app which was designed to demonstrate OWASP Top 10
 ```sh
@@ -60,8 +52,10 @@ rails server (start up server at port 3000)
 Since downloading and compiling gems make take long time, please run above command prior coming to the session
 
 ######Additional tools
-Burp Suite (Free version): http://portswigger.net/burp/downloadfree.html<br>
-DB tool: http://www.dbvis.com/download/
+- Burp Suite (Free version): Web Pen Testing Toolsuite <a href="http://portswigger.net/burp/downloadfree.html" target="_blank">Download Here</a><br>
+- DB tool: Universal DB Client tool. <a href="http://www.dbvis.com/download/" target="_blank">Download Here</a><br>
+- Webgoat: Another Security Test Lab using Java stack. <a href="https://github.com/WebGoat/WebGoat/releases/download/v6.0.1/WebGoat-6.0.1-war-exec.jar" target="_blank">Download Here</a>
+- Webgoat.net: Another Security Test Lab using .NET stack. https://github.com/jerryhoff/WebGoat.NET
 
 ####Common issues
 Sometimes gems got failure during installation, in that case try to follow the last instruction from the log that outputed to screen). If even the instruction doesn't help, then post it up on the Sydney Tester Bootcamp wall.
@@ -69,3 +63,5 @@ Sometimes gems got failure during installation, in that case try to follow the l
 ####Reading Material
 - <a href="https://www.owasp.org/index.php/Top_10_2013-Top_10" target="_blank">OWASP Top 10</a>: List of top 10 security issues. Please make sure you go through this before the session.
 - Quick Youtube video on <a href="https://www.youtube.com/watch?v=JmAk1OVwp-4" target="_blank">how to setup and use Burp Suite</a>
+
+
