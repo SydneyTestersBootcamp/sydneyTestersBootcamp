@@ -63,5 +63,6 @@ Sometimes gems got failure during installation, in that case try to follow the l
 ####Reading Material
 - <a href="https://www.owasp.org/index.php/Top_10_2013-Top_10" target="_blank">OWASP Top 10</a>: List of top 10 security issues. Please make sure you go through this before the session.
 - Quick Youtube video on <a href="https://www.youtube.com/watch?v=JmAk1OVwp-4" target="_blank">how to setup and use Burp Suite</a>
+- The Railsgoat application itself. Please register/login and go through pages of the website before joining the session.
 
 
