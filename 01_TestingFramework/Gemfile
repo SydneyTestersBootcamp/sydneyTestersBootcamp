@@ -20,7 +20,7 @@ gem "parallel_tests"
 
 gem "chromedriver-helper"
 
-gem "activerecord"
+gem "activerecord", ">= 4.1.6"
 gem "sinatra-activerecord"
 gem 'data_mapper'
 gem "warden"
