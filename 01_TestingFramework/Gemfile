@@ -3,13 +3,13 @@ source 'http://rubygems.org'
 ruby '2.1.0'
  
 gem 'tilt', '~> 1.4.1'
-gem "sinatra"
+gem "sinatra", ">= 2.0.0"
 gem "haml"
 gem "slim"
 gem 'rack-google-analytics'
 gem 'newrelic_rpm'
 gem "json"
-gem "rack-test"
+gem "rack-test", ">= 0.6.3"
 gem "simplecov"
 gem "travis"
 gem "rake"
@@ -18,19 +18,19 @@ gem "therubyracer"
 gem "zip"
 gem "parallel_tests"
 
-gem "chromedriver-helper"
+gem "chromedriver-helper", ">= 0.0.8"
 
 gem "activerecord"
-gem "sinatra-activerecord"
+gem "sinatra-activerecord", ">= 2.0.12"
 gem 'data_mapper'
-gem "warden"
+gem "warden", ">= 1.2.4"
 
 gem "cucumber"
-gem "capybara"
+gem "capybara", ">= 2.4.2"
 gem "selenium-webdriver"
 
 group :development, :test do
- gem "shotgun"
+ gem "shotgun", ">= 0.9.1"
  gem 'sqlite3'
  gem "tux"
  gem 'dm-sqlite-adapter'
