@@ -22,7 +22,7 @@ gem 'data_mapper'
 gem "warden"
 
 gem "cucumber"
-gem "capybara"
+gem "capybara", ">= 2.4.2"
 
 group :development, :test do
  gem "shotgun"
