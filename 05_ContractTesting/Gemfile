@@ -29,7 +29,7 @@ group :development, :test do
  gem 'sqlite3'
  gem "tux"
  gem 'dm-sqlite-adapter'
- gem 'pact'
+ gem 'pact', '>= 1.65.2'
 end
 
 group :production do
