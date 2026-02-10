@@ -11,7 +11,7 @@ gem 'newrelic_rpm'
 gem "json"
 gem "rack-test"
 gem "simplecov"
-gem "travis"
+gem "travis", ">= 1.12.0"
 gem "rake"
 gem "coffee-script"
 gem "therubyracer"
